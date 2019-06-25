@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Backup your deployment - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Backup your deployment";
+    var mkdocs_page_input_path = "deployment-backup.md";
+    var mkdocs_page_url = "/deployment-backup/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Backup your deployment</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#certificates">Certificates</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#dkim-keys">DKIM Keys</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#system-passwords">System passwords</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#rspamd-administration-interface">Rspamd administration interface</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#encryption-keys">Encryption keys</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#backup-encryption-keys">Backup Encryption keys</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#ssh-keys">SSH Keys</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Backup your deployment</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The files in these folders are excluded from the git repository. When deploying for the first time, they will contain
+some important files, to avoid being regenerated every time you are running the Ansible scripts.</p>
+<p>This is useful, both for archiving purposes and during the development phase. It will also alows you to restore your
+server, with all the data, user accounts, certificates, passwords, encryption keys. etc. very easily.</p>
+<p>A sub-folder named after your domain is created in this &ldquo;backup&rdquo; folder. So you can use the same repository to work on
+multiple domains.</p>
+<h2 id="certificates">Certificates</h2>
+<p>When developing and testing homebox, you can optionally backup the letsencrypt certificates. This allows you to redeploy
+the certificates without requesting new ones, and therefore decrease development cycle. This is also very important, to
+avoid requesting the certificates again and again, and being blocked by LetsEncrypt.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">system</span><span class="p p-Indicator">:</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">devel</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</span>  <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<p>The certificates requested are <a href="https://letsencrypt.org/docs/staging-environment/">“staging” letsencrypt certificates</a>,
+i.e. they do not work without displaying a warning in the client&rsquo;s sofwate, unless a specific certificate authority is
+installed.</p>
+<p>When using a live version, the certificates are not saved, and need to be requested again on each deployment, unless
+you are using the option <code>system.keep_certs</code>:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">system</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">devel</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">keep_certs</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This allows you to backup live letsencrypt certificate, and can be useful in a pre-production environment, where a
+continuous integration test need real certificates. Make sure your workstation is secure enough.</p>
+</div>
+<p>See the system configuration section in the <a href="../development/#system-configuration">development page</a> for more details.</p>
+<p>For instance, here some of the certificates generated, for the domain &ldquo;homebox.space&rdquo;</p>
+<ul>
+<li>imap.homebox.space</li>
+<li>ldap.homebox.space</li>
+<li>smtp.homebox.space</li>
+<li>webmail.homebox.space</li>
+<li>autodiscover.homebox.space (when using autodiscover from Outlook)</li>
+<li><span>www</span>.homebox.space and homebox.space (When activating the option simple web site)</li>
+</ul>
+<p>When deploying the live version, the certificates are generated on the server, and not backed up.</p>
+<h2 id="dkim-keys">DKIM Keys</h2>
+<p>This folder contains the DKIM keys generated on the server. The installation script will compare these DKIM public key
+with the one recorded in your DNS, and will update it only if different.</p>
+<h2 id="system-passwords">System passwords</h2>
+<p>The ‘ldap’ folder contains the passwords generated automatically for some accounts in the LDAP directory</p>
+<ul>
+<li>admin.pwd: Super administrator password, read/write on the entire LDAP system</li>
+<li>manager.pwd: Manager: read/write access to user accounts</li>
+<li>readonly.pwd: readonly account to query the ldap server</li>
+<li>import.pwd: Master account used to inject imported external emails into the user&rsquo;s emails.</li>
+<li>postmaster.pwd: Postmaster account, that receives, for instance, emails like postmaster@domain.com or
+  webmaster@domain.com.</li>
+</ul>
+<h2 id="rspamd-administration-interface">Rspamd administration interface</h2>
+<p>The Antispam comes with an excellent <a href="https://www.rspamd.com/webui/">web interface</a> that provides basic functions for
+setting metric actions, scores, viewing statistic and learning.</p>
+<h2 id="encryption-keys">Encryption keys</h2>
+<p>The encrypted keys generated by the system are stored in the <code>encryption</code> folder.</p>
+<p>When you have activated the backup option, the backup encryption passphrase is stored in this folder in a file named
+<code>backup.pwd</code>. <strong>Do not loose thise file if you want to be able to restore your system from scratch</strong>.</p>
+<p>The file <code>system-key.pwd</code> contains a passphrase keys used to encrypt local files. This is actually used to encrypt the
+credentials for the <a href="../external-accounts/">external accounts</a> emails import.</p>
+<h2 id="backup-encryption-keys">Backup Encryption keys</h2>
+<p>The backup encryption keys, generated by borg backup software are going inside the folder <code>backup-keys</code>, These keys are
+named after your backup location. <strong>Do not loose thise file if you want to be able to restore your system from
+scratch</strong>.</p>
+<h2 id="ssh-keys">SSH Keys</h2>
+<p>This folder contains the ssh keys generated for the root user, when you are using backup via an SFTP folder. You can
+copy the public ssh key on the backup server, for a user named &ldquo;backup&rdquo;. This is explained in more details in the
+<a href="../backup-home/">backup documentation</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backup-server/" class="btn btn-neutral float-right" title="Backup server">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../backup-restore/" class="btn btn-neutral" title="Backup restoration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../backup-restore/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../backup-server/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Maintenance - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Maintenance";
+    var mkdocs_page_input_path = "maintenance.md";
+    var mkdocs_page_url = "/maintenance/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Maintenance</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#connecting-on-your-server">Connecting on your server</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-or-updating-user-accounts">Adding or updating user accounts</a></li>
+                
+                    <li><a class="toctree-l4" href="#changing-passwords">Changing passwords</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-or-remove-email-aliases">Add or remove email aliases</a></li>
+                
+                    <li><a class="toctree-l4" href="#adding-a-user-account">Adding a user account</a></li>
+                
+                    <li><a class="toctree-l4" href="#modifying-a-user-account">Modifying a user account</a></li>
+                
+                    <li><a class="toctree-l4" href="#removing-user-accounts">Removing user accounts</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#updating-the-system">Updating the system</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#adding-or-removing-components">Adding or removing components</a></li>
+                
+                    <li><a class="toctree-l4" href="#removing-clamav">Removing ClamAV</a></li>
+                
+                    <li><a class="toctree-l4" href="#removing-rspamd">Removing rspamd</a></li>
+                
+                    <li><a class="toctree-l4" href="#automatic-configuration-sites">Automatic configuration sites</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#restarting-the-system">Restarting the system</a></li>
+                
+                    <li><a class="toctree-l4" href="#with-physical-access">With physical access</a></li>
+                
+                    <li><a class="toctree-l4" href="#with-physical-access-and-a-yubikey">With physical access and a Yubikey</a></li>
+                
+                    <li><a class="toctree-l4" href="#remotely-over-ssh">Remotely over SSH</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Maintenance</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="connecting-on-your-server">Connecting on your server</h2>
+<p>To connect on your server, you can use SSH to administer it, like doing your packages update.</p>
+<h2 id="adding-or-updating-user-accounts">Adding or updating user accounts</h2>
+<p>At this date, there is no web interface or graphical user interface included to update the add, remove or edit user
+accounts. Maybe a web interface will be added later.  In the mean time, here some procedures you can follow.</p>
+<h3 id="changing-passwords">Changing passwords</h3>
+<p>If you only need to change an account password, you can use the command line interface and the passwd command via SSH.</p>
+<div class="codehilite"><pre><span></span>passwd john
+</pre></div>
+
+
+<p>You might have to respect the password policies in place, like minimal length and complexity.</p>
+<h3 id="add-or-remove-email-aliases">Add or remove email aliases</h3>
+<p>Updating the email aliases for a user is very easy. First, modify the aliases section for the user, in the system.yml
+configuration file:</p>
+<div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">uid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mike</span>
+  <span class="l l-Scalar l-Scalar-Plain">cn</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Mike Dear</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Mike</span>
+  <span class="l l-Scalar l-Scalar-Plain">last_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Dear</span>
+  <span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mike.dear@example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&#39;n~wI*rhf873&#39;</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">aliases</span><span class="p p-Indicator">:</span>
+</span><span class="hll">    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mike@homebox.space</span>
+</span><span class="hll">    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mikael@homebox.space</span>
+</span></pre></div>
+
+
+<p>Then, run the Ansible playbook called <strong>ldap-refresh.yml</strong>. This playbook refresh the email aliases only, and does not
+touch anything else. It will also remove any email alias previously added if it is not in the list.</p>
+<h3 id="adding-a-user-account">Adding a user account</h3>
+<p>The best way is to modify the users section ofyour system.yml configuration file and to run an Ansible scripts
+again. The main advantage of this, is that the database will be up to date if you need to deploy your server again.</p>
+<p>First, add a new user in the users list:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">users</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">uid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mike</span>
+  <span class="l l-Scalar l-Scalar-Plain">cn</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Mike Dear</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Mike</span>
+  <span class="l l-Scalar l-Scalar-Plain">last_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Dear</span>
+  <span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mike.dear@example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&#39;n~wI*rhf873&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">aliases</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mike@homebox.space</span>
+</pre></div>
+
+
+<p>Then, run the dedicated playbook to update users:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> install
+ansible-playbook -v -i ../config/hosts.yml playbooks/update-users.yml
+</pre></div>
+
+
+<p>The home playbook create the home directories for this user.</p>
+<h3 id="modifying-a-user-account">Modifying a user account</h3>
+<p>If you want to directly modify a user account specified in your LDAP settings, there is a script installed in
+<strong>/usr/local/sbin/ldap-user-edit</strong>. With his script, you can directly modify an LDAP user account, from your system.</p>
+<p>It is a wrapper around ldapvi, so you will be able to quicly edit any user, for instance to update an email address or
+an alias, or to fix a typo in the username. This is not meant to major modifications.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any modification made this way will not be part of a disaster recovery. You will need to reflect the change in your
+system.yml too.</p>
+</div>
+<h3 id="removing-user-accounts">Removing user accounts</h3>
+<p>There is not yet an Ansible script to remove a user account, this will be added soon. In the mean time, any LDAP
+compliant script, like <em>ldapdelete</em> should be enough.</p>
+<h2 id="updating-the-system">Updating the system</h2>
+<p>This can be done through SSH, like you are doing on any Debian server.</p>
+<h2 id="adding-or-removing-components">Adding or removing components</h2>
+<p>If you have not modified the system configuration files too much, you should be able to add components just by updating
+your system.yml configuration file, and running the Ansible scripts again.</p>
+<p>Removing components entirely is not so easy, and is not entirely supported for now. However, you should be able to
+remove them using the standard Debian packaging system, i.e. <strong>dpkg</strong>.</p>
+<h3 id="removing-clamav">Removing ClamAV</h3>
+<p>Because postfix is configured to filter emails through ClamAV, you will have to re-run the
+Ansible scripts to install Postfix again.</p>
+<ol>
+<li>Remove the Clamav packages</li>
+<li>Update your system.yml file</li>
+<li>Run the Ansible main.yml script again</li>
+</ol>
+<h3 id="removing-rspamd">Removing rspamd</h3>
+<p>Because postfix is configured to filter emails through ClamAV, you will have to re-run the
+Ansible scripts to install Postfix again.</p>
+<ol>
+<li>Remove the rspamd packages</li>
+<li>Update your system.yml file</li>
+<li>Run the Ansible main.yml script again</li>
+</ol>
+<h3 id="automatic-configuration-sites">Automatic configuration sites</h3>
+<p>The easiest way is probably to remove the site from the enabled one, and restart nginx:</p>
+<p>For <em>Mozilla Thunderbird</em> Autoconfig</p>
+<div class="codehilite"><pre><span></span>rm -f /etc/nginx/sites-enabled/autoconfig.&lt;your domain&gt;
+systemctl restart nginx
+</pre></div>
+
+
+<p>For <em>Microsoft Outlook</em> Autodiscover</p>
+<div class="codehilite"><pre><span></span>rm -f /etc/nginx/sites-enabled/autodiscover.&lt;your domain&gt;
+systemctl restart nginx
+</pre></div>
+
+
+<h2 id="restarting-the-system">Restarting the system</h2>
+<p>If you have installed the system with the main drive encrypted using LUKS, you need to keep a way to decrypt your drive,
+locally or remotely</p>
+<h3 id="with-physical-access">With physical access</h3>
+<p>Plug a screen and a keyboard, and type your passphrase when the system boot.</p>
+<h3 id="with-physical-access-and-a-yubikey">With physical access and a Yubikey</h3>
+<p>If you chose to decrypt your drive with a Yubikey, just insert the Yubikey, and press enter.</p>
+<h3 id="remotely-over-ssh">Remotely over SSH</h3>
+<p>When the system starts, a small SSH server is started, which allows you to decrypt the drive remotely.
+Here an example using a command line SSH client:</p>
+<div class="codehilite"><pre><span></span>andre@london:~ $ ssh root@rodier.me
+
+To unlock root partition, and maybe others like swap, run <span class="sb">`</span>cryptroot-unlock<span class="sb">`</span>
+
+
+BusyBox v1.22.1 <span class="o">(</span>Debian <span class="m">1</span>:1.22.0-19+b3<span class="o">)</span> built-in shell <span class="o">(</span>ash<span class="o">)</span>
+Enter <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of built-in commands.
+
+~ <span class="c1"># cryptroot-unlock</span>
+Please unlock disk sda5_crypt:
+cryptsetup: sda5_crypt <span class="nb">set</span> up successfully
+~ <span class="c1"># Connection to 192.168.32.12 closed by remote host.</span>
+Connection to <span class="m">192</span>.168.32.12 closed.
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../development/" class="btn btn-neutral float-right" title="Testing and development">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../zabbix/" class="btn btn-neutral" title="Monitoring with Zabbix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../zabbix/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../development/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

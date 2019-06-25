@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Backup server - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Backup server";
+    var mkdocs_page_input_path = "backup-server.md";
+    var mkdocs_page_url = "/backup-server/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Backup server</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ideal-configuration">Ideal configuration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#local-backup-only">Local backup only</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#tutorial">Tutorial</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-1-configure-the-connection">Step 1: Configure the connection</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-2-initialise-the-backup">Step 2: Initialise the backup</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-3-create-the-first-backup">Step 3: create the first backup</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Backup server</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The homebox platform can be configured to act as a backup server for your home network, using
+<a href="https://www.borgbackup.org/">borg-backup</a> software.</p>
+<h1 id="ideal-configuration">Ideal configuration</h1>
+<p><img alt="" src="../img/backup-server/schema-ideal.svg" /></p>
+<p>This configuration allows you to use encryption and incremental backups, with a plain basic local or remote storage,
+like a USB RAID enclosure or a remote samba share.</p>
+<p>It will automatically use the first backup location you have defined. For instance, if you have configured hombox to
+backup on local USB drive and on a remote SAMBA share, the local drive will be used for storage:</p>
+<h1 id="local-backup-only">Local backup only</h1>
+<p><img alt="" src="../img/backup-server/schema-minimal.svg" /></p>
+<p>If you do not have an external device to store the backup, you can still use homebox as a backup server. In this case,
+the files will be stored in the home folder, for each user, using the same principle.</p>
+<p>This is obviously less safe than using a remote or external device to backup. You can mitigate the risk by using
+<a href="../preseed/#software-raid">software RAID</a> in the preseed file.</p>
+<h1 id="tutorial">Tutorial</h1>
+<p>In this example, you will see how to set up a backup solution on a USB NAS attached to your homebox.</p>
+<p>Your backup configuration should look like this:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Install backup scripts</span>
+<span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">borgbackup</span>
+  <span class="l l-Scalar l-Scalar-Plain">alerts</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">jabber</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nas1</span>
+    <span class="l l-Scalar l-Scalar-Plain">automount</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">usb://mnt/backup/nas1/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">uuid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">c09c23de-97b6-492b-9c7f-e3cd894862d1</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12</span>
+    <span class="l l-Scalar l-Scalar-Plain">idle_sec</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+</pre></div>
+
+
+<p>In this example, each user will have a dedicated directory accessible over SSH, on the USB drive ‘nas1’. Under the hood,
+this is done in the SSH authorized_keys configuration file on the server.</p>
+<p>This is an example on how to back-up a folder in your home directory. You need to have borg-backup installed on your
+workstations, and to have created an SSH key, dedicated for backup.</p>
+<h2 id="step-1-configure-the-connection">Step 1: Configure the connection</h2>
+<p>Example of the syntax to use in your <code>~/.ssh/config</code> configuration file:</p>
+<div class="codehilite"><pre><span></span>Host backup.homebox.space
+  User bob
+  IdentityFile ~/.ssh/backup.rsa
+</pre></div>
+
+
+<h2 id="step-2-initialise-the-backup">Step 2: Initialise the backup</h2>
+<p>First, you need to initialise a backup repository on your machine:</p>
+<div class="codehilite"><pre><span></span>Enter new passphrase:
+Enter same passphrase again:
+Do you want your passphrase to be displayed <span class="k">for</span> verification? <span class="o">[</span>yN<span class="o">]</span>:
+
+By default repositories initialized with this version will produce security
+errors <span class="k">if</span> written to with an older version <span class="o">(</span>up to and including Borg <span class="m">1</span>.0.8<span class="o">)</span>.
+
+If you want to use these older versions, you can disable the check by running:
+borg upgrade --disable-tam ssh://bob@backup.homebox.space/mnt/backup/local/bob/books
+
+See https://borgbackup.readthedocs.io/en/stable/changes.html#pre-1-0-9-manifest-spoofing-vulnerability <span class="k">for</span> details about the security implications.
+
+IMPORTANT: you will need both KEY AND PASSPHRASE to access this repo!
+Use <span class="s2">&quot;borg key export&quot;</span> to <span class="nb">export</span> the key, optionally in printable format.
+Write down the passphrase. Store both at safe place<span class="o">(</span>s<span class="o">)</span>.
+</pre></div>
+
+
+<h2 id="step-3-create-the-first-backup">Step 3: create the first backup</h2>
+<p>Then, create the backup itself:</p>
+<div class="codehilite"><pre><span></span>bob@workstation:~ $ borg create --progress bob@backup.homebox.space:/mnt/backup/nas1/bob/Documents::Documents Documents
+Enter passphrase <span class="k">for</span> key /home/bob/.config/borg/keys/backup_homebox_space__mnt_backup_nas1_bob_backups:
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../zabbix/" class="btn btn-neutral float-right" title="Monitoring with Zabbix">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../deployment-backup/" class="btn btn-neutral" title="Backup your deployment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../deployment-backup/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../zabbix/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

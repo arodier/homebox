@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Homebox Installation - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Homebox Installation";
+    var mkdocs_page_input_path = "installation.md";
+    var mkdocs_page_url = "/installation/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Homebox Installation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#installation-steps">Installation steps</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-1-locate-is-your-system">Step 1: Locate is your system</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-2-describe-your-system">Step 2: Describe your system</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-3-start-the-installation">Step 3: Start the installation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#most-important-sections">Most important sections</a></li>
+                
+                    <li><a class="toctree-l4" href="#network-configuration">Network configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#users-list">Users list</a></li>
+                
+                    <li><a class="toctree-l4" href="#email-options">Email options</a></li>
+                
+                    <li><a class="toctree-l4" href="#firewall-configuration">Firewall configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#security-options">Security options</a></li>
+                
+                    <li><a class="toctree-l4" href="#webmail">Webmail</a></li>
+                
+                    <li><a class="toctree-l4" href="#backup-configuration">Backup configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#dns-server-configuration">DNS server configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#extra-certificates">Extra certificates</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Homebox Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation-steps">Installation steps</h1>
+<h2 id="step-1-locate-is-your-system">Step 1: Locate is your system</h2>
+<p>Whatever you chose to host your system at home, or to use a VPS, you need to be specify its location to Ansible.</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> install/config
+cp hosts-example.yml hosts.yml
+nano hosts.yml
+</pre></div>
+
+
+<p>Here an example on your LAN:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">all</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">homebox</span><span class="p p-Indicator">:</span>
+<span class="hll">      <span class="l l-Scalar l-Scalar-Plain">ansible_host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">192.168.1.254</span>
+</span>      <span class="l l-Scalar l-Scalar-Plain">ansible_user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">root</span>
+      <span class="l l-Scalar l-Scalar-Plain">ansible_port</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">22</span>
+</pre></div>
+
+
+<p>Using root during the installation process is a requirement. However, the system can be configured to use sudo once
+installed. See the security section, <a href="../security-configuration/#defining-administrators">Defining administrators</a>.</p>
+<h2 id="step-2-describe-your-system">Step 2: Describe your system</h2>
+<p>The main configuration file to create is in the config folder. There is an example named system-example.yml ready to
+copy to customise. There is also a configuration file defaults.yml. This file contains all the possible options.</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> config
+cp system-example.yml system.yml
+nano system.yml
+</pre></div>
+
+
+<p>The system configuration file is a complete YAML configuration file containing all your settings:</p>
+<ul>
+<li>Network information, specifically your domain name.</li>
+<li>User and group details, like email addresses and aliases.</li>
+<li>Email parameters, like maximum attachment size, antivirus options, etc.</li>
+<li>Some password policies, like minimum length and complexity.</li>
+<li>Webmail settings (roundcube or SOGo).</li>
+<li>Low level system settings, mainly used during the development phase.</li>
+<li>Firewall policies, especially SSH access.</li>
+<li>Security settings.</li>
+<li>Backup strategies.</li>
+</ul>
+<p>The most important settings are the first two sections, the others can be left to their default values.</p>
+<p>Once you have modified the file, you are ready to start the installation.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The system.yml file is merged with the default configuration on deployment. Therefore, you can override any default
+value without having to copy entire branches.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful with the indentation in your Yaml file, the number of spaces is significant.</p>
+</div>
+<h2 id="step-3-start-the-installation">Step 3: Start the installation</h2>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> install
+ansible-playbook -i ../config/hosts.yml playbooks/main.yml
+</pre></div>
+
+
+<h1 id="most-important-sections">Most important sections</h1>
+<h2 id="network-configuration">Network configuration</h2>
+<h3 id="domain-name-and-host-name">Domain name and host name</h3>
+<p>Every network subdomain entries, email addresses, etc&hellip; will include the domain name, so this is important you put the
+real value here:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">domain</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mail.homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">external_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>
+  <span class="l l-Scalar l-Scalar-Plain">backup_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">~</span>
+</pre></div>
+
+
+<p>The hostname is important, use the real one. If you used the preseed configuration, it should be just mail and your
+network domain.</p>
+<h3 id="external-ip-address-detection">External IP address detection</h3>
+<p>The external IP address is normally automatically detected. If this is not the case, you can specify it manually. If
+your server has a second IP address, you can specify it here as well. By default, none is defined. You can mix IPv4
+and IPv6 addresses. DNS entries will be added accordingly.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">domain</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mail.homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">external_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12.34.56.78</span>
+  <span class="l l-Scalar l-Scalar-Plain">backup_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2001:15f0:5502:bf1:5400:01ff:feca:dea6</span>
+</pre></div>
+
+
+<p>If you have a server with both an IPv4 and an IPv6, it can be detected automatically using this syntax:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">domain</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mail.homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">external_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>
+  <span class="l l-Scalar l-Scalar-Plain">backup_ip</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">auto_ipv6</span>
+</pre></div>
+
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you have two IP addresses of the same type (e.g. 2 x IPv4), you canot ask the installation script to detect them
+automatically. You will have to specify them manually.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you do not have a backup IP address, use &ldquo;~&rdquo; like the example.</p>
+</div>
+<h2 id="users-list">Users list</h2>
+<p>The file format should be self explanatory. The other piece of information you need to fill first is the user list. In
+its simplest form, you will have something like this:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">users</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">uid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">john</span>
+  <span class="l l-Scalar l-Scalar-Plain">cn</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">John Doe</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">John</span>
+  <span class="l l-Scalar l-Scalar-Plain">last_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Doe</span>
+  <span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">john.doe@example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&#39;xIlm*uu7&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">aliases</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">john@homebox.space</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">johny@homebox.space</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">johny-be-good@homebox.space</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">uid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jane</span>
+  <span class="l l-Scalar l-Scalar-Plain">cn</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Jane Doe</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Jane</span>
+  <span class="l l-Scalar l-Scalar-Plain">last_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Doe</span>
+  <span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jane.doe@example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">aliases</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jane@homebox.space</span>
+</pre></div>
+
+
+<p>The email aliases are the other email addresses that belongs to the same user.</p>
+<p>You can also add more advanced features, like:</p>
+<ul>
+<li><a href="../external-accounts/">Import emails from other accounts</a>.</li>
+<li><a href="../security-configuration/#defining-administrators">Define some users as administrators</a></li>
+<li><a href="../security-configuration/#grant-some-users-remote-access">Grant remote access to certain users</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not have to set the passwords for each user if you don&rsquo;t want to. In this case, a random password will be
+generated, and saved in the deployment backup directory, in the ldap folder. In this case, there will be one file
+called &lsquo;jane.pwd&rsquo;. Otherwise, you can specify the password in clear text. For complex passwords, use quotes</p>
+</div>
+<h2 id="email-options">Email options</h2>
+<p>This is the second most important settings. Here an example of the email options you can override:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">max_attachment_size</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>   <span class="c1"># In megabytes</span>
+  <span class="l l-Scalar l-Scalar-Plain">autoconfig</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>          <span class="c1"># Support Thunderbird automatic configuration</span>
+  <span class="l l-Scalar l-Scalar-Plain">autodiscover</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>       <span class="c1"># Support MS Outlook automatic configuration (uses https)</span>
+  <span class="l l-Scalar l-Scalar-Plain">quota</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">default</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1G</span>             <span class="c1"># Maximum allowed mailbox size for your users.</span>
+</pre></div>
+
+
+<p>All options are detailed on the <a href="../email-configuration/">email configuration</a> page.</p>
+<h2 id="firewall-configuration">Firewall configuration</h2>
+<p>The firewall is configured by default to deny everything except what is permitted, both in input and output. The backend
+used is &ldquo;ufw&rdquo;. If you have specific requirements, you can define the initial rules yourself.
+See the <a href="../firewall-configuration/">firewall configuration</a> page for details.</p>
+<p>By default, a firewall rule is automatically added to allow SSH connections from the IP address used for the
+installation. This should prevent being locked out of your system. You can remove this rule at the end of the playbook,
+especially if you are <a href="../firewall-configuration/#single-packet-authorization">using fwknop</a> to access your system.</p>
+<h2 id="security-options">Security options</h2>
+<p>Security options are detailed on the <a href="../security-configuration/">security page</a>.
+The default settings are</p>
+<ul>
+<li>Automatically install security updates using unattended upgrades.</li>
+<li>Send alerts to the postmaster.</li>
+<li>Force root SSH login to use public key cryptography, and not a password.</li>
+<li>Disable the root password.</li>
+</ul>
+<p>Other options are possible, see the security page for details.</p>
+<h2 id="webmail">Webmail</h2>
+<p>By default, the installation script installs Roundcube, but you can disable it if you want. For instance, SOGo is
+available as well, with calendars and address books.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">webmail</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">roundcube</span>
+</pre></div>
+
+
+<p>More details on the <a href="../webmail-roundcube/">webmail roundcube</a> page.</p>
+<h2 id="backup-configuration">Backup configuration</h2>
+<p>It is possible to regularly backup your emails, for instance locally on a NAS drive, or on internet, using various
+methods.</p>
+<p>By default, the whole home partition is back up, but you can add or exclude more folders. The detailed instructions are
+on the <a href="../backup-home/">backup documentation</a> page.</p>
+<h2 id="dns-server-configuration">DNS server configuration</h2>
+<p>The recommended way is to use the internal DNS server, with a minimal configuration like this:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">bind</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">forward</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">8.8.8.8</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">8.8.4.4</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2001:4860:4860::8888</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2001:4860:4860::8844</span>
+</pre></div>
+
+
+<p>You can also use <a href="https://en.wikipedia.org/wiki/OpenDNS#Name_server_IP_addresses">OpenDNS servers</a> for forward.</p>
+<p>Once your DNS set up is complete, you can monitor the <a href="../dns-propagation/">world wide propagation</a>.</p>
+<h2 id="extra-certificates">Extra certificates</h2>
+<p>It is possible to generate more SSL certificates, for instance if you want to deploy other services and want
+the certificates to be generated and renewed automatically.</p>
+<p>You only have to add one variable <code>extra-certs</code> in your configuration file, for instance:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_certs</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gitlab</span>
+    <span class="l l-Scalar l-Scalar-Plain">redirect</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">packages</span>
+    <span class="l l-Scalar l-Scalar-Plain">redirect</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<p>By adding these lines, certificates will be automatically generated for the sub domains &ldquo;gitlab&rdquo; and &ldquo;packages&rdquo;, using
+letsencrypt.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The flag &ldquo;redirect&rdquo; means the users will be automatically redirect from http to https when entering the address.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../email-configuration/" class="btn btn-neutral float-right" title="Email configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../preseed/" class="btn btn-neutral" title="Debian OS installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../preseed/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../email-configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

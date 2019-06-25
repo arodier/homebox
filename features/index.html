@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Features - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Features";
+    var mkdocs_page_input_path = "features.md";
+    var mkdocs_page_url = "/features/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Features</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#backup-and-disaster-recovery">Backup and disaster recovery</a></li>
+                
+                    <li><a class="toctree-l4" href="#debian-iso-image-builder">Debian ISO image builder</a></li>
+                
+                    <li><a class="toctree-l4" href="#multiple-encrypted-backups">Multiple encrypted backups</a></li>
+                
+                    <li><a class="toctree-l4" href="#disaster-recovery">Disaster recovery</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#security">Security</a></li>
+                
+                    <li><a class="toctree-l4" href="#full-disk-encryption">Full disk encryption</a></li>
+                
+                    <li><a class="toctree-l4" href="#apparmor-enforcement">AppArmor enforcement</a></li>
+                
+                    <li><a class="toctree-l4" href="#fail2ban-integration">Fail2ban integration</a></li>
+                
+                    <li><a class="toctree-l4" href="#ldap-authentication">LDAP Authentication</a></li>
+                
+                    <li><a class="toctree-l4" href="#password-policies">Password policies</a></li>
+                
+                    <li><a class="toctree-l4" href="#automatic-security-update">Automatic security update</a></li>
+                
+                    <li><a class="toctree-l4" href="#monitoring">Monitoring</a></li>
+                
+                    <li><a class="toctree-l4" href="#high-profiles-for-ssl-https">High profiles for SSL / HTTPS</a></li>
+                
+                    <li><a class="toctree-l4" href="#unusual-behaviour-detection">Unusual behaviour detection</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#email-features">Email features</a></li>
+                
+                    <li><a class="toctree-l4" href="#digital-signature">Digital signature</a></li>
+                
+                    <li><a class="toctree-l4" href="#internationalised-email-aliases">Internationalised email aliases</a></li>
+                
+                    <li><a class="toctree-l4" href="#address-extension">Address extension</a></li>
+                
+                    <li><a class="toctree-l4" href="#sieve-filtering">Sieve filtering</a></li>
+                
+                    <li><a class="toctree-l4" href="#full-text-search">Full text search</a></li>
+                
+                    <li><a class="toctree-l4" href="#master-user">Master user</a></li>
+                
+                    <li><a class="toctree-l4" href="#automatic-client-configuration">Automatic client configuration</a></li>
+                
+                    <li><a class="toctree-l4" href="#antivirus">Antivirus</a></li>
+                
+                    <li><a class="toctree-l4" href="#antispam-with-automatic-learning">Antispam with automatic learning</a></li>
+                
+                    <li><a class="toctree-l4" href="#external-accounts-import">External accounts import</a></li>
+                
+                    <li><a class="toctree-l4" href="#roundcube-webmail">Roundcube Webmail</a></li>
+                
+                    <li><a class="toctree-l4" href="#automatic-copy-to-the-sent-folder">Automatic copy to the sent folder</a></li>
+                
+                    <li><a class="toctree-l4" href="#email-access-logging">Email access logging</a></li>
+                
+                    <li><a class="toctree-l4" href="#privacy-features">Privacy features</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#calendars-and-address-books">Calendars and address books</a></li>
+                
+                    <li><a class="toctree-l4" href="#sogo-groupware">SOGo groupware</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#xmpp-jabber-server">XMPP / Jabber server</a></li>
+                
+                    <li><a class="toctree-l4" href="#client-to-server">Client to Server</a></li>
+                
+                    <li><a class="toctree-l4" href="#server-to-server">Server to Server</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#other-features">Other features</a></li>
+                
+                    <li><a class="toctree-l4" href="#gogs-git-server">Gogs git server</a></li>
+                
+                    <li><a class="toctree-l4" href="#bittorrent-download-station">Bittorrent download station</a></li>
+                
+                    <li><a class="toctree-l4" href="#privoxy-server">Privoxy server</a></li>
+                
+                    <li><a class="toctree-l4" href="#tor-server">Tor server</a></li>
+                
+                    <li><a class="toctree-l4" href="#multiple-ip-scheme">Multiple IP scheme</a></li>
+                
+                    <li><a class="toctree-l4" href="#dnssec-support">DNSSEC Support</a></li>
+                
+                    <li><a class="toctree-l4" href="#single-packet-port-knocking">Single packet port knocking</a></li>
+                
+                    <li><a class="toctree-l4" href="#certificates-management">Certificates management</a></li>
+                
+                    <li><a class="toctree-l4" href="#basic-sites-creation">Basic sites creation</a></li>
+                
+                    <li><a class="toctree-l4" href="#modular-components">Modular components</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#developer-friendly">Developer friendly</a></li>
+                
+                    <li><a class="toctree-l4" href="#included-debug">Included debug</a></li>
+                
+                    <li><a class="toctree-l4" href="#integrated-testing">Integrated testing</a></li>
+                
+                    <li><a class="toctree-l4" href="#development-support">Development support</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Features</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="backup-and-disaster-recovery">Backup and disaster recovery</h1>
+<h2 id="debian-iso-image-builder">Debian ISO image builder</h2>
+<p>You can generate an ISO image to install Debian on your server, using a simple configuration file in YAML format.</p>
+<p>This will make a quick re-installation disk for the system. It will configure for you full disk encryption and
+<em>AppArmor</em> support straight on the first boot. It is not made to install the software stack, that need to be deployed
+with Ansible, from a remote workstation. Although it might be possible to integrate the deployment scripts into the ISO
+image.</p>
+<p>Because this feature can be useful to other projects, a dedicated project has been created on
+<a href="https://github.com/progmaticltd/debian-iso-builder">github</a>.</p>
+<h2 id="multiple-encrypted-backups">Multiple encrypted backups</h2>
+<p>You can setup multiple backups for your user&rsquo;s home folders, remote or local, with multiple frequencies as well. For
+instance, one daily backup on your NAS using a Samba share, and a weekly backup on a remote server using SSH. All the
+backups are encrypted and managed by the excellent <em>borgbackup</em> package. A <a href="../backup/#emails-reporting">summary email</a> is
+sent at the end of the backup process. If you have opted for the Jabber installation, a short message is sent as well,
+notifying you of the job completion.</p>
+<h2 id="disaster-recovery">Disaster recovery</h2>
+<p>When you are deploying the system for the first time, all the information generated is saved on the deployment
+workstation. This gives you a way to re-install your system from scratch, without loosing any information.</p>
+<p>If you have specified an external backup location, for instance on a remote server through SSH or on Amazon S3, all your
+emails, address books and calendars will be automatically restored from the backup location of your choice.</p>
+<h1 id="security">Security</h1>
+<h2 id="full-disk-encryption">Full disk encryption</h2>
+<p>When you are using the ISO image builder to install Debian, the server disk will be fully encrypted using LUKS, with the
+passphrase specified in a configuration file.</p>
+<p>This make your server fully secure against physical intrusion, even if your hardware is lost or stolen.</p>
+<p>You do not have to plug a screen and a keyboard to unlock your server. Once it is booted, the server starts a small SSH
+server to connect, and let you enter the passphrase.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SSH server started on boot share the same public key with OpenSSH. Therefore, you will not have the usual SSH
+warnings staying the signature has changed.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is also possible to use a <a href="https://yubico.com/">Yubikey</a>, with or without a passphrase, to decrypt your drive. In
+this case, a safe script to enroll your key is provided.</p>
+</div>
+<h2 id="apparmor-enforcement">AppArmor enforcement</h2>
+<p>All the daemons are carefully configured with an AppArmor profile, in enforce mode. This protects you against remote
+intrusion and 0-day vulnerabilities as well.</p>
+<h2 id="fail2ban-integration">Fail2ban integration</h2>
+<p>Fail2ban is integrated and configured, to automatically blacklist IP addresses used by spammers to attack your
+server. It makes this kind of attacks inefficient, and saves your bandwidth too. The duration of jail is customisable for
+jabber and email services.</p>
+<h2 id="ldap-authentication">LDAP Authentication</h2>
+<p>One password per user, for all the services. All the user accounts are saved in the LDAP database, using the OpenLDAP
+package in Debian. A dedicated SSL certificate is created during the installation, allowing secure SSL and TLS
+communication with the server.</p>
+<h2 id="password-policies">Password policies</h2>
+<p>Password complexity is enforced using the <a href="https://packages.debian.org/stretch/libpam-pwquality">pwquality module</a>. You
+can specify minimum length, mandatory characters like symbols and a mix of lowercase / uppercase letters. You can also
+remember the last passwords for each users, avoiding them to re-use the same passwords or use a password too similar
+than the previous ones.</p>
+<h2 id="automatic-security-update">Automatic security update</h2>
+<p>Once your system is installed, any security update will be installed in background, without you having to do
+anything. This is set using the <a href="https://wiki.debian.org/UnattendedUpgrades">Debian unattended upgrades</a> package.  If
+you prefer to install security updates yourself, you can disable this behaviour in your system.yml file.</p>
+<p>Only the security updates are installed, new packages versions still need to be installed manually.</p>
+<h2 id="monitoring">Monitoring</h2>
+<p>The installer can deploy a complete monitoring solution, <a href="https://zabbix.com">Zabbix</a>.</p>
+<ul>
+<li>You can set up email or XMPP alerts, on various events.</li>
+<li>You can add other servers / machines to your monitoring server.</li>
+<li>You can set-up SMS alerts if, for instance, your internet connection goes down.</li>
+</ul>
+<p>By default, the guest account is deleted, and a strong password is generated.</p>
+<h2 id="high-profiles-for-ssl-https">High profiles for SSL / HTTPS</h2>
+<p>All HTTPS sites are configured to use <a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>.  For nginx
+and dovecot, a 2048 Diffie-Helman parameter file is generated upon installation.  Ranked score A on
+<a href="https://tools.geekflare.com/">geekflare.com</a> and A+ on <a href="https://www.ssllabs.com">ssllabs.com</a>.</p>
+<h2 id="unusual-behaviour-detection">Unusual behaviour detection</h2>
+<p>This advanced feature is unique amongst both commercial and self-hosted solutions. It is actually restricted to IMAP,
+but will be extended to other services. It is working by using a &ldquo;points&rdquo; system, where more points generate warnings or
+even deny the connection.</p>
+<p>The following behaviour are detected, from the :</p>
+<ul>
+<li>Access from a blacklisted IP address</li>
+<li>Access from an IP address recently blacklisted by fail2ban</li>
+<li>Access from a different country than the one the box is hosted</li>
+<li>Access outside office hours</li>
+</ul>
+<p>Although the initial values should be accurate for standard usage, any of the previous checks can be tuned for a
+specific usage. For instance, it is possible to:</p>
+<ul>
+<li>Whitelist / Blacklist countries, globally or per user.</li>
+<li>Whitelist / Blacklist IP addresses, globally or per user.</li>
+<li>Set office hours, globally only at this time.</li>
+</ul>
+<p>Warning and errors are sent in real time, using XMPP and email to the user and an external email address. Two factors
+authentication on unusual behaviour will be implemented later, perhaps using google authenticator.</p>
+<h1 id="email-features">Email features</h1>
+<h2 id="digital-signature">Digital signature</h2>
+<p>A DKIM certificate of 4096 bits is generated during the installation, and the associated public key is published on the
+DNS server. The DKIM key purpose is to mark emails coming from your domain as authentic.</p>
+<p>The SPF and DMARC records are generated and published automatically as well. This will guarantee your emails being
+recognised by other email servers without any problem.</p>
+<h2 id="internationalised-email-aliases">Internationalised email aliases</h2>
+<p>You can add as many email aliases as you want for your user accounts. Moreover, you will be able to add email addresses
+with internationalised characters, using a standardised LDAP schema. You can then have email addresses like
+andré@homebox.space.</p>
+<h2 id="address-extension">Address extension</h2>
+<p>When registering on a service, you can use address extensions, to directly receive emails in a specific folder. For
+instance, emails to <strong>john+lists@example.com</strong> will be directly saved into the <strong>‘lists’</strong> folder of your IMAP server.</p>
+<p>Email folders can be automatically created and subscribed as well, and you can use any character to separate your email
+address. for instance ‘:’, ‘~’, ‘/’ etc.</p>
+<h2 id="sieve-filtering">Sieve filtering</h2>
+<p>Sieve filtering support, with automatic answering, vacation, regular expression, custom scripts support, etc. The web
+interface to configure your filters is powerful but easy to use.</p>
+<p>You can also access your sieve filters with the <em>ManageSieve</em> protocol, and the <a href="https://addons.mozilla.org/en-US/thunderbird/addon/sieve/">Thunderbird
+extension</a>.</p>
+<p>For instance, you can automatically:</p>
+<ul>
+<li>move/copy messages to specified folder</li>
+<li>redirect/copy messages to another account</li>
+<li>discard messages with a specific error message</li>
+<li>reply automatically, using vacation at specific dates</li>
+<li>delete messages</li>
+<li>sett flags (e.g. flag, mark as read, etc.)</li>
+</ul>
+<h2 id="full-text-search">Full text search</h2>
+<p>The server implements full text search inside your emails <em>and</em> your attachments.  Full text search is also done inside
+attached archives (zip, rar, etc). The following attachments types are actually recognised:</p>
+<ul>
+<li>PDF files.</li>
+<li>Text, XML and HTML files (various encoding)</li>
+<li>Microsoft Office documents: doc, docx, xls, xlsx, pptx.</li>
+<li>LibreOffice/OpenOffice documents: ods, odt, odp, sxw.</li>
+<li>Other office documents: csv, rtf, gnumeric and abiword files</li>
+<li>E-Books (epub)</li>
+<li>Attached emails (eml)</li>
+<li>Archives: (zip, tar, rar, gzip)</li>
+<li>Old microsoft archive format: tnef (aka winmail.dat)</li>
+</ul>
+<p>Archives are opened recursively, until finding documents to parse.</p>
+<p><strong>Notes and Limitations:</strong></p>
+<ul>
+<li>Although encrypted archives cannot be opened, the file list is indexed.</li>
+<li>Powerpoint files before 2003 (.ppt) are not well supported.</li>
+</ul>
+<h2 id="master-user">Master user</h2>
+<p>Whatever you use your email server for a community or a family, you can activate the &ldquo;impersonate&rdquo; function. This
+function creates a &ldquo;master&rdquo; user, with an access to every other user&rsquo;s mail boxes.</p>
+<p>This feature is disabled by default, it is meant to be useful for families with children with an email address or small
+communities.</p>
+<p>However, as soon as the master user is accessing someone&rsquo;s email address, the user receives an alert by XMPP and an
+email is sent as well.</p>
+<h2 id="automatic-client-configuration">Automatic client configuration</h2>
+<p>The server supports <em>Mozilla Thunderbird</em>, <em>Microsoft Outlook</em> and other email clients automatic configuration. This
+makes the life of your users easier. It creates and publish autoconfig.xml, autodiscover.xml and DNS records (<a href="https://tools.ietf.org/html/rfc6186">RFC
+6186</a>).</p>
+<h2 id="antivirus">Antivirus</h2>
+<p>The emails received are automatically checked for viruses, and are discarded by default if they are infected. The emails
+sent by your users are checked as well, avoiding your IP address to be blacklisted if one of your account is
+compromised.</p>
+<p>You can also choose to explicitly reject (bounce) emails containing viruses. In all case, the analysis is done after the
+email queue, making the process non blocking and efficient on small resourced hardware.</p>
+<h2 id="antispam-with-automatic-learning">Antispam with automatic learning</h2>
+<p>The antispam integrated with the system is very easy to use. The automatic learning is done just by moving emails out or
+in the Junk email folder.</p>
+<p>It is powered by rspamd, a pioneered application in term of junk email detection.</p>
+<h2 id="external-accounts-import">External accounts import</h2>
+<p>You can add other email accounts (Yahoo, GMail, Outlook.com, etc.). The emails will be automatically downloaded and
+synchronised when you connect with any client, and will appear in your account.</p>
+<p>Because the folders hierarchy will be copied as well, it is possible to migrate from another account very easily.</p>
+<h2 id="roundcube-webmail">Roundcube Webmail</h2>
+<p>There are two webmail available. RoundCube, and SOGo.</p>
+<p>RoundCube, comes with the following plugins / features activated by default:</p>
+<ul>
+<li>Archive</li>
+<li>Context Menu</li>
+<li>Emoticons</li>
+<li>Sieve Rules management, with vacation, automatic answers, etc…</li>
+<li>Mark as Junk</li>
+<li>New mail desktop notification</li>
+<li>Password modification</li>
+<li>IMAP Subscriptions management</li>
+<li>Hotkeys support (Ctrl+Enter to send an email)</li>
+<li>Log the real client IP address to the mail server</li>
+</ul>
+<p>When the master user functionality has been activated, the impersonate plugin is also installed, allowing you to inspect
+any user&rsquo;s emails directly from the webmail.</p>
+<p>More plugins can be activated very easily, just by specifying their name in the list of plugins.</p>
+<h2 id="automatic-copy-to-the-sent-folder">Automatic copy to the sent folder</h2>
+<p>You do not need to configure your mail client to copy emails to the sent folder, this is done automatically for
+you. This is a lot of time saved, especially when sending big emails with attachments: You don&rsquo;t need to upload an email
+twice.</p>
+<h2 id="email-access-logging">Email access logging</h2>
+<p>Each access to the email server is logged in real time, and contains the following information:</p>
+<ul>
+<li>Source IP address</li>
+<li>Country</li>
+<li>Channel (RoundCube, SOGo or IMAP)</li>
+<li>etc…</li>
+</ul>
+<p>A monthly report is sent to each user, the first of each month, with a summary of access and some statistics.</p>
+<h2 id="privacy-features">Privacy features</h2>
+<p>When emails are sent, the user agent (i.e. Thunderbird, Evolution, etc…) version is removed, both for security and
+privacy.</p>
+<h1 id="calendars-and-address-books">Calendars and address books</h1>
+<h2 id="sogo-groupware">SOGo groupware</h2>
+<p>It is also possible to install SOGo, which offer collaborative features, calendaring and address books. There are both
+accessible using respectively CalDAV and CardDAV standards.</p>
+<h3 id="features-of-sogo-activated">Features of SOGo activated:</h3>
+<ul>
+<li>Send emails reminder on events</li>
+<li>Vacation messages</li>
+<li>Forward your messages to another email address</li>
+<li>Sieve scripts editor</li>
+<li>Use the same web interface to access other emails</li>
+<li>Change your password from the web interface</li>
+</ul>
+<p>More details on the <a href="https://sogo.nu/">SOGo home page</a> and on the official <a href="https://sogo.nu/support.html#/v3">documentation
+page</a>.</p>
+<h1 id="xmpp-jabber-server">XMPP / Jabber server</h1>
+<p>The installation script can install an XMPP / Jabber server, by using <a href="https://www.ejabberd.im/">ejabberd</a>,
+a “<em>Rock Solid, Massively Scalable, Infinitely Extensible XMPP Server</em>”.</p>
+<h2 id="client-to-server">Client to Server</h2>
+<ul>
+<li>The authentication is using the LDAP server.</li>
+<li>Generate a 2048 bits Diffie-Helman key.</li>
+<li>Encryption enforcement, at least TLS 1.2.</li>
+<li>Jabber Fail2Ban integration</li>
+<li>Grade A on <a href="https://xmpp.net/index.php">IM Observatory</a> client and server reports.</li>
+<li>SOCKS5 Bytestreams file transfers with image thumbnails (pidgin, empathy, etc.).</li>
+<li>Offline file sending using https on a dedicated sub-domain (Android Conversations, etc.).</li>
+<li>Automatically add contact (rosters) from the shared directory.</li>
+<li>VCard generation from the LDAP server.</li>
+<li>Message archives on the server, with archive management from the client (MAM).</li>
+<li>User avatars are stored on the server.</li>
+<li>Conference / chat rooms between multiple domains.</li>
+</ul>
+<h2 id="server-to-server">Server to Server</h2>
+<p>The installation scripts can also activates server to server communication (aka s2s).  This is optional but activated by
+default. It is also possible to restrict access to trusted servers, by specifying a list of domain names you want to
+trust.</p>
+<p>Some clients: <a href="https://xmpp.org/software/clients.html">XMPP client software</a>.</p>
+<h1 id="other-features">Other features</h1>
+<h2 id="gogs-git-server">Gogs git server</h2>
+<p>You can optionally install a small, fast and lightweight git server called <a href="https://gogs.io/">gogs</a>. The server is configured
+with the following features:</p>
+<ul>
+<li>HTTPS certificate</li>
+<li>LDAP authentication</li>
+<li>Automatic update</li>
+<li>Two factors authentication</li>
+<li>Repository mirroring</li>
+</ul>
+<h2 id="bittorrent-download-station">Bittorrent download station</h2>
+<p>You can install the transmission bittorrent daemon, accessible over https on a dedicated domain.</p>
+<ul>
+<li>The web interface and the RPC servers are protected with the LDAP credentials, unless you are at home.</li>
+<li>Downloaded files can be accessed directly from your web browser, still using the LDAP credentials if you are not at home.</li>
+<li>The daemon runs in a proper AppArmor profile.</li>
+<li>Easy to use form to search downloaded files in your web browser.</li>
+<li>Automatic firewall configuration to allow bittorrent both input and output.</li>
+<li>Blacklist support and automatic update.</li>
+</ul>
+<h2 id="privoxy-server">Privoxy server</h2>
+<p>The platform configures Privoxy with an automatic import of adblock rules from easylist, updated every day. The following rules
+are activated by default:</p>
+<ul>
+<li>EasyList</li>
+<li>EasyPrivacy</li>
+<li>Fanboy&rsquo;s Annoyance List</li>
+<li>Fanboy&rsquo;s Social Blocking List</li>
+</ul>
+<h2 id="tor-server">Tor server</h2>
+<p>The platform configures Tor as well, and allows you to ooverride any option. You can also chain privoxy and tor
+together.</p>
+<h2 id="multiple-ip-scheme">Multiple IP scheme</h2>
+<p>Homebox can be configured with two static IP addresses, with a mix of IPv4 amd IPv6. This is useful if you are using a
+VPN that provides you a static IP address or if you are using 3G / 4G as a backup connection.</p>
+<p>IPv6 is actually tested on <a href="https://vultr.com/">vultr.com</a>, a provider that supports full IPv6, on virtual
+servers. Digital Ocean does not allows SMTP or Submission on IPv6.</p>
+<h2 id="dnssec-support">DNSSEC Support</h2>
+<p>If you need a higher level of security and a protection agains DNS cache poisoning, you can activate the DNSSEC
+extensions. Once the playbook has been run, an email is sent to postmaster, with the ZSK (Zone Signing Key) and KSK (Key
+Signing Key) attached.</p>
+<p>The server installed is bind9. When activated, the server also publishes
+<a href="https://en.wikipedia.org/wiki/SSHFP_record">SSHFP</a> records for extra security.</p>
+<h2 id="single-packet-port-knocking">Single packet port knocking</h2>
+<p>SPA is essentially next generation port knocking. It is using encryption and HMAC keys, to open your firewall for an SSH
+connection.</p>
+<ul>
+<li>Supports HMAC authenticated encryption for both Rijndael and GnuPG.</li>
+<li>Replay attacks are detected and thwarted by SHA-256 digest comparison of valid incoming SPA packets.</li>
+</ul>
+<p>More details explained on the <a href="../spa-fwknop">Comprehensive Guide</a>.</p>
+<h2 id="certificates-management">Certificates management</h2>
+<p>Automatically generate certificates for each services, using LetsEncrypt. The certificates are saved on the deployment
+workstation as well, and reused if you are deploying your server again.</p>
+<h2 id="basic-sites-creation">Basic sites creation</h2>
+<p>The system can create a skeleton for a static web site for you, with two https certificates as well. The certificates
+created, for instance for the domain example.com, will be www.example.com and example.com.</p>
+<p>You can also use <a href="https://gohugo.io/">Hugo</a> and its <a href="https://themes.gohugo.io/">numerous themes</a> to create your
+site. The nginx server will be configured as a reverse proxy for your site, using a systemd Hugo service.</p>
+<p>The hugo web site content need to be placed in the backup folder:</p>
+<p><code>backup/\&lt;domain-name\&gt;/website-hugo/</code></p>
+<p>The site will be synchronised on the server, and served by Hugo systemd daemon, protected by AppArmor.</p>
+<h2 id="modular-components">Modular components</h2>
+<p>Although All the components are well integrated together, it is possible to replace them by another one, or to remove
+them. For instance, the RoundCube webmail and SOGo groupware are optional, like the automatic configuration modules for
+<em>Mozilla Thunderbird</em> and <em>Microsoft Outlook</em>.</p>
+<h1 id="developer-friendly">Developer friendly</h1>
+<h2 id="included-debug">Included debug</h2>
+<p>When you will deploy the server for the first time, on when you are developing, you can set a global &ldquo;debug&rdquo; flag. This
+will activate the verbose or debug logging option of every service. Just using systemctl, you will be then able to
+filter by service. Once everything is working, set the flag back to false, run the deployment script again, and you have
+a sever ready for production.</p>
+<h2 id="integrated-testing">Integrated testing</h2>
+<p>Until we have a full testing environment, perhaps based on virtualisation, you are already able to test the most
+important features of your server, automatically, with one command, with an Ansible playbook. This test playbook is
+running self diagnostic tasks on your server, and test the following:</p>
+<ul>
+<li>Basic OS tests</li>
+<li>LDAP server</li>
+<li>Home folders</li>
+<li>Antispam (rspamd)</li>
+<li>Antivirus (clamav)</li>
+<li>OpenDMARC</li>
+<li>Certificates for all services</li>
+<li>DKIM keys (opendkim)</li>
+<li>Postfix configuration</li>
+<li>IMAP access (dovecot)</li>
+<li>Autoconfig and Autodiscover</li>
+<li>DNS records and DNSSEC when the DNS server is installed</li>
+<li>Privoxy and Tor configuration</li>
+<li>Zabbix</li>
+</ul>
+<h2 id="development-support">Development support</h2>
+<p>A playbook add support for development packages, necessary to debug and diagnostic the system while you are developing
+it, like SMTP or DNS tools. Once the development is finished, another playbook remove these packages and cleanup the
+system.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../prerequisites/" class="btn btn-neutral float-right" title="Before the installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../prerequisites/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

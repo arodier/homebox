@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Before the installation - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Before the installation";
+    var mkdocs_page_input_path = "prerequisites.md";
+    var mkdocs_page_url = "/prerequisites/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Before the installation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+                    <li><a class="toctree-l4" href="#hosting-emails-at-home">Hosting emails at home</a></li>
+                
+                    <li><a class="toctree-l4" href="#hosting-emails-online">Hosting emails online</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pre-installation-steps">Pre-installation steps</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-up-your-domain-name">Set up your domain name</a></li>
+                
+                    <li><a class="toctree-l4" href="#choose-the-hardware">Choose the hardware</a></li>
+                
+                    <li><a class="toctree-l4" href="#set-up-your-home-network">Set-up your home network</a></li>
+                
+                    <li><a class="toctree-l4" href="#prepare-your-workstation">Prepare your workstation</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Before the installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>This section will explains all the necessary steps <em>before</em> the installation really starts, like the DNS records or your
+home network set-up.</p>
+<p>It is not a &ldquo;Self hosting for newbies&rdquo;, but if you follow the instructions carefully, you do not need strong technical
+knowledge to achieve the above.</p>
+<p>You still need some basic understanding though, like what is an IP address or a port, how to run Ansible in a console,
+how to edit Yaml files, etc.</p>
+<h2 id="hosting-emails-at-home">Hosting emails at home</h2>
+<p>If you want seriously host your emails at home, you will need the following:</p>
+<ul>
+<li>A static IP address from your ISP (Internet Service Provider).</li>
+<li>Make sure your port 25 is not blocked.</li>
+<li>A low power consumption hardware.</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Better privacy,</li>
+<li>Cheaper if you already pay for broadband with a static IP address.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Your internet connection and electric providers need to be stable.</li>
+<li>Might be cumbersome when you are moving</li>
+</ul>
+<h2 id="hosting-emails-online">Hosting emails online</h2>
+<p>Any serious hosting platform can provide a server, virtual or physical, with an externally accessible IP address. Some
+providers, however, are blocking the port 25 (e.g. Google cloud).</p>
+<p>Be careful, using a VPS (Virtual Private Server) is no more secure than hosting at your home.</p>
+<p>Pros:</p>
+<ul>
+<li>Does not rely on the reliability of your internet connection or your electricity provider</li>
+<li>You can move to another address easily.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>You may not have control on the kernel installed. This is less secure than Homebox, which is by default configured to
+  run on AppArmor.</li>
+<li>You will not be able to use Full Disk Encryption. Although there are some security measures in places, it is still
+  perfectly possible to extract data from your disk without your knowledge or consent.</li>
+<li>You will not have the choice on when and which security updates are applied. Most hosting providers have specific time
+  windows to update the kernel images they use, which may not be as soon as you need, or even appropriate to you.</li>
+<li>Might be expensive, especially if you have a lot of data.</li>
+</ul>
+<h1 id="pre-installation-steps">Pre-installation steps</h1>
+<h2 id="set-up-your-domain-name">Set up your domain name</h2>
+<p>The first thing you need is a domain name and a DNS provider, there are many available. For instance, here a
+<a href="https://github.com/AnalogJ/lexicon#providers">list of other DNS providers</a> you can use.</p>
+<p>The screenshots and examples in this tutorial are specific to <a href="https://www.gandi.net/">Gandi</a>, but the principles are
+the same.</p>
+<p>Once you have chosen the domain name, it is necessary to configure the associated DNS servers, and the <em>glue records</em>.</p>
+<p>For instance, on Gandi, you will have to set up the glue records first and then the DNS servers used for your domain:</p>
+<h3 id="glue-records">Glue records</h3>
+<p>Create at least one record that points to your static IP address.</p>
+<p><img alt="Glue records" src="../img/dns-setup/glue-records.png" /></p>
+<h3 id="dns-servers">DNS servers</h3>
+<p>Add the DNS server accordingly</p>
+<p><img alt="DNS servers" src="../img/dns-setup/dns-servers.png" /></p>
+<h2 id="choose-the-hardware">Choose the hardware</h2>
+<p>An old laptop should be enough to start, with the main advantage of being somewhat resilient to power failures. I also
+suggest you to have a look on this Debian page: <a href="https://wiki.debian.org/FreedomBox/Hardware">Cheap Serverbox Hardware</a>
+of the project freedombox, another excellent project.</p>
+<p>The preseed configuration (see next step) provides an option to use software RAID, so you can use this as well if you
+prefer.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You still need to regularly backup your data, even if you are using RAID.</p>
+</div>
+<h2 id="set-up-your-home-network">Set-up your home network</h2>
+<p>This is necessary only if you choose to use a home device to host your emails. If you are using an online server, you
+can skip this section.</p>
+<p><img alt="Network setup" src="../img/initial/home-schema.svg" /></p>
+<p>Ideally, you will need to configure your router to redirect all the external traffic to your homebox using the &ldquo;DMZ&rdquo;
+functionality if there is one. The other option is to redirect only the ports you will need.</p>
+<p>Initially, the following TCP ports are required:</p>
+<ul>
+<li>To obtain your certificates from LetsEncrypt, the port 80 need to be exposed.</li>
+<li>To test sending and receiving emails, your system should be accessible on the port 25 as well.</li>
+<li>To retrieve emails, your system should be accessible on ports 143, 993, 110, 995.</li>
+<li>To send emails, your system should be accessible on ports 587 and/or 465.</li>
+<li>For Thunderbird automatic configuration, your system should be accessible on port 80.</li>
+<li>Once installed, SOGo and the webmail are accessible through https (port 443).</li>
+</ul>
+<p>The next step is to link your domain name (e.g homebox.me) to your static IP address that has been assigned to you by
+your ISP.</p>
+<h2 id="prepare-your-workstation">Prepare your workstation</h2>
+<p>Any workstation with a decent text editor like <em>Emacs</em>, <em>Vim</em> or even Gedit should be enough. You will need to run the
+Ansible scripts, and perhaps to install some packages, like rsync. I recommend using Linux, any flavour. For instance,
+on Debian or Ubuntu:</p>
+<div class="codehilite"><pre><span></span>$ sudo apt install ansible rsync
+</pre></div>
+
+
+<p>If you already have a Debian server (Stretch) installed, and you prefer to use it, it&rsquo;s fine, you can skip the next
+section and start the <a href="../installation/">installation</a> directly. Otherwise, click on next to read the OS installation
+page.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../preseed/" class="btn btn-neutral float-right" title="Debian OS installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../features/" class="btn btn-neutral" title="Features"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../features/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../preseed/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

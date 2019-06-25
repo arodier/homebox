@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>External accounts - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "External accounts";
+    var mkdocs_page_input_path = "external-accounts.md";
+    var mkdocs_page_url = "/external-accounts/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">External accounts</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#retrieving-emails">Retrieving emails</a></li>
+                
+                    <li><a class="toctree-l4" href="#security">Security</a></li>
+                
+                    <li><a class="toctree-l4" href="#example">Example</a></li>
+                
+                    <li><a class="toctree-l4" href="#details-of-the-options">Details of the options</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#gmail-special-cases">GMail Special cases</a></li>
+                
+                    <li><a class="toctree-l4" href="#important-emails">Important emails</a></li>
+                
+                    <li><a class="toctree-l4" href="#get-archives">Get archives</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>External accounts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="retrieving-emails">Retrieving emails</h1>
+<p>It is possible to add external accounts (GMail, Outlook, Yahoo, IMAP, etc&hellip;) to the platform.
+In this case, your emails will be downloaded in background, every time you logon on your account.</p>
+<p>This is a one way synchronisation only, the remote accounts are not modified.</p>
+<h2 id="security">Security</h2>
+<p>The credentials and the settings are stored on your box only, encrypted with AES 256 bits scheme.  The description key
+is stored by the root account. The credentials are decrypted by the user account and kept in memory during the
+synchronisation process.</p>
+<p>Behind the scene, the platform is using <a href="http://isync.sourceforge.net/mbsync.html">isync</a>.</p>
+<p>Whatever you access your account using the webmail or using an email client, the emails from other accounts will be
+downloaded transparently.</p>
+<p>The folders hierarchy is reproduced on your server, with some adaptations for GMail, though.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The emails will be imported once only. The system is keeping a record of the emails indexes already imported.</li>
+<li>Emails from external accounts are downloaded in the background, when you are checking your emails, from any client.</li>
+<li>The imported emails are re-filtered using the Sieve filters you have specified,</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<p>Below is an example for one user named &ldquo;andre&rdquo;, with multiple external accounts:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">users</span><span class="p p-Indicator">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">uid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">andre</span>
+  <span class="l l-Scalar l-Scalar-Plain">cn</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">André Rodier</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">André</span>
+  <span class="l l-Scalar l-Scalar-Plain">last_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Rodier</span>
+  <span class="l l-Scalar l-Scalar-Plain">mail</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">andre@homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ioherin937aaf</span>
+  <span class="l l-Scalar l-Scalar-Plain">aliases</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">andré@homebox.space</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">andy@homebox.space</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">andrew@homebox.space</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">external_accounts</span><span class="p p-Indicator">:</span>
+</span>    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">work</span>
+      <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">imap</span>
+      <span class="l l-Scalar l-Scalar-Plain">host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">imap.company.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">arodier</span>
+      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&#39;Imlirhf*62e3&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">max_messages</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">zoho</span>
+      <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">imap</span>
+      <span class="l l-Scalar l-Scalar-Plain">host</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">imappro.zoho.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">andre@rodier.me</span>
+      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="s">&#39;mt6wiu*VFkjv&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">max_messages</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_junk</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gmail</span>
+      <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gmail</span>
+      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">arodier427@gmail.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">bqlcmryyxswmvofw</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_important</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_junk</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_trash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">max_messages</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yahoo</span>
+      <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ymail</span>
+      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">arodier666@ymail.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pkxzibnnzakbizvq</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_junk</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_trash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">max_messages</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">outlook</span>
+      <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">live.com</span>
+      <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">jbond007@live.co.uk</span>
+      <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">uqspxcsghssipmfw</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_junk</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">get_trash</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="l l-Scalar l-Scalar-Plain">max_messages</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+
+
+<h2 id="details-of-the-options">Details of the options</h2>
+<p>There are a few options to download emails detailled below.</p>
+<h3 id="server-name-name">Server name: &ldquo;name&rdquo;</h3>
+<p>The name option is used to keep track of your email synchronisation state. It is totally arbitrary, although
+it is better to keep a logic name. This is mandatory.</p>
+<h3 id="specify-the-server-type-type">Specify the server type: &ldquo;type&rdquo;</h3>
+<p>The type option is mandatory, and represents some pre-recorded settings to import your email.</p>
+<p>It can be for instance &ldquo;gmail&rdquo;, &ldquo;<span>live</span>.com&rdquo;, &ldquo;ymail&rdquo; (Yahoo), or plain IMAP.</p>
+<p>If you are using IMAP, you will have to specify the server address.</p>
+<p>The import system will try SSL and TLS for connection.</p>
+<h3 id="synchronise-junk-emails-too-get_junk">Synchronise Junk emails too: &ldquo;get_junk&rdquo;</h3>
+<p>If you want to import and keep synchronised Junk/Spam emails too, set this option to true.
+It is set to false by default.</p>
+<h3 id="synchronise-trashbin-emails-too-get_trash">Synchronise Trash/Bin emails too: get_trash</h3>
+<p>If you do not want to import delete emails too, set this option to false. It is set to true by default.</p>
+<h3 id="testing-the-synchronisation-max_messages">Testing the synchronisation: &ldquo;max_messages&rdquo;</h3>
+<p>This option is useful if you want to test the import / synchronisation, and see how the folders will be synchronised.
+In the example above, the system downloads the last 10 emails, but will reproduce the entire folders hierarchy.</p>
+<h1 id="gmail-special-cases">GMail Special cases</h1>
+<p>Google Mail (aka GMail) has some specific features, that make the import trickier.
+However, the system makes some choice.
+For instance, the folders hierarchy is reproduced, but without the ugly &lsquo;[Google Mail]&rsquo; label.</p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Google Mail]/Sent Mail</td>
+<td>/Sent</td>
+</tr>
+<tr>
+<td>[Google Mail]/Drafts</td>
+<td>/Draft</td>
+</tr>
+<tr>
+<td>[Google Mail]/Archives</td>
+<td>/Archives</td>
+</tr>
+<tr>
+<td>[Google Mail]/Bin</td>
+<td>/Trash</td>
+</tr>
+<tr>
+<td>[Google Mail]/Spam</td>
+<td>/Junk</td>
+</tr>
+<tr>
+<td>[Google Mail]/Chat</td>
+<td>Not synchronised.</td>
+</tr>
+<tr>
+<td>[Google Mail]/Starred</td>
+<td>Not synchronised.</td>
+</tr>
+<tr>
+<td>[Google Mail]/Important</td>
+<td>Optionally synchronised.</td>
+</tr>
+</tbody>
+</table>
+<p>The &ldquo;Starred&rdquo; folder is a virtual folder that represents a view of your starred emails.
+The same behaviour will be added to this platform.</p>
+<p>Since Google Mail has merged IMAP folders and labels, some emails will be imported multiple times,
+into multiple folders, if they have multiple labels.
+There is nothing to do - yet - about this, but it is better to import an email multiple times rather than
+loosing emails.</p>
+<h2 id="important-emails">Important emails</h2>
+<p>As a corollary, there is an option, specific to GMail, to download the emails marked as &ldquo;Important&rdquo; in
+a dedicated folder, the option is called &ldquo;<code>get_important</code>&rdquo;, and set to true by default.</p>
+<h2 id="get-archives">Get archives</h2>
+<p>This option is set to true by default. Set it to false if you do not want to download your entire email
+archives.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful, some email providers will not let you download emails once archived, for instance Zoho.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backup-home/" class="btn btn-neutral float-right" title="Backup your home folders">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bind-configuration/" class="btn btn-neutral" title="DNS Server configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../bind-configuration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../backup-home/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

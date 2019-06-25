@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Debian OS installation - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Debian OS installation";
+    var mkdocs_page_input_path = "preseed.md";
+    var mkdocs_page_url = "/preseed/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Debian OS installation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#steps-to-do">Steps to do</a></li>
+                
+                    <li><a class="toctree-l4" href="#1-install-docker-ce">1. Install Docker CE</a></li>
+                
+                    <li><a class="toctree-l4" href="#2-configure-your-system">2. Configure your system</a></li>
+                
+                    <li><a class="toctree-l4" href="#3-set-up-remote-access">3. Set up remote access</a></li>
+                
+                    <li><a class="toctree-l4" href="#4-build-the-iso-image">4. Build the ISO image</a></li>
+                
+                    <li><a class="toctree-l4" href="#5-boot-the-system">5. Boot the system</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#disk-scheme-options">Disk scheme options</a></li>
+                
+                    <li><a class="toctree-l4" href="#full-disk-encryption">Full disk encryption</a></li>
+                
+                    <li><a class="toctree-l4" href="#software-raid">Software RAID</a></li>
+                
+                    <li><a class="toctree-l4" href="#lvm-only">LVM only</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Debian OS installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>This step is only required if you want to build a Debian installation disc - before running the Ansible scripts. It does
+not install the homebox server software stack.</p>
+<p><img alt="Preseed build" src="../img/preseed/process.svg" /></p>
+<p>The disc created does not install the mail server, only the Debian distribution. However, there are two features
+automatically installed and easily configured: AppArmor and Full Disc Encryption with LUKS. This will protect you
+both against remote and physical intrusion.</p>
+<p>It is also copying your public SSH key onto the installation disc, so you can directly connect to your server
+securely with your SSH key.</p>
+<p>The installer runs with Ansible, as the root user. A flag can be set  to completely disable remote root login, and to
+enforce sudo usage, once the installation is finished.</p>
+<p>There are actually three flavours. The first one is a fully encrypted drive with a passphrase; the second one installs
+on a machine with two drives and software RAID; the last one is using LVM only.</p>
+<p>This script can be used both for development with a virtual machine or for production to install the operating system
+base.</p>
+<h1 id="steps-to-do">Steps to do</h1>
+<h2 id="1-install-docker-ce">1. Install Docker CE</h2>
+<p>Docker will only be used to create an automatic installer as an ISO image. You can use this ISO image both at home or
+with a VPS that supports ISO image installation.</p>
+<ul>
+<li>On Debian: <a href="https://docs.docker.com/install/linux/docker-ce/debian/">Get Docker CE for Debian</a>.</li>
+<li>On Ubuntu: <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">Get Docker CE for Ubuntu</a>.</li>
+</ul>
+<p>If you did not use docker before, you may need to add your user to the docker group, and restart your session. You can
+do the former using the terminal:</p>
+<div class="codehilite"><pre><span></span>$ sudo adduser bob docker
+</pre></div>
+
+
+<h2 id="2-configure-your-system">2. Configure your system</h2>
+<p>Copy system-example.yml to system.yml, and modify the values accordingly:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> preseed
+cp system-example.yml system.yml
+nano system.yml
+</pre></div>
+
+
+<p>The file is self-explanatory. A content example is shown below:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">system</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">hostname</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">mail</span>
+  <span class="l l-Scalar l-Scalar-Plain">passphrase</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Correct horse battery stapple</span>
+  <span class="l l-Scalar l-Scalar-Plain">preseed</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">luks</span>
+  <span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">9.9</span>
+  <span class="l l-Scalar l-Scalar-Plain">arch</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">amd64</span>
+  <span class="l l-Scalar l-Scalar-Plain">boot_timeout</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>   <span class="c1"># In seconds</span>
+
+<span class="l l-Scalar l-Scalar-Plain">network</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">domain</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">iface</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>            <span class="c1"># or use eth0, ens3, etc...</span>
+
+<span class="c1"># Country and locales definition</span>
+<span class="l l-Scalar l-Scalar-Plain">country</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">code</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">uk</span>
+  <span class="l l-Scalar l-Scalar-Plain">timezone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Europe/London</span>
+
+<span class="l l-Scalar l-Scalar-Plain">locale</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">en_GB</span>
+  <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">en</span>
+  <span class="l l-Scalar l-Scalar-Plain">country</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UK</span>
+  <span class="l l-Scalar l-Scalar-Plain">charset</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">UTF-8</span>
+  <span class="l l-Scalar l-Scalar-Plain">keymap</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gb</span>
+
+<span class="c1"># Repository specific values</span>
+<span class="l l-Scalar l-Scalar-Plain">repo</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">release</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">stretch</span>
+  <span class="l l-Scalar l-Scalar-Plain">main</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ftp.uk.debian.org</span>
+  <span class="l l-Scalar l-Scalar-Plain">security</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">security.debian.org</span>
+  <span class="l l-Scalar l-Scalar-Plain">sections</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">main contrib non-free</span>
+
+<span class="c1"># Clock parameters</span>
+<span class="l l-Scalar l-Scalar-Plain">clock</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">utc</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">ntp</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="c1"># Accounts informations</span>
+<span class="c1"># You can choose a strong password here,</span>
+<span class="l l-Scalar l-Scalar-Plain">root</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Tr0ub4dor&amp;3</span>
+
+<span class="c1"># Debug: As it states</span>
+<span class="l l-Scalar l-Scalar-Plain">debug</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you do not have physical access to your box, don&rsquo;t worry, you will be able to enter the passphrase remotely over
+SSH.</p>
+</div>
+<h2 id="3-set-up-remote-access">3. Set up remote access</h2>
+<p>The second thing to do is to copy your SSH public key into the folder <code>config/authorized_key</code>. This file will be copied
+into the <code>/root/.ssh/authorized_keys</code> by the automatic installer. This setup is absolutely required for Ansible to work.</p>
+<p>For instance:</p>
+<div class="codehilite"><pre><span></span>$ cat ~/.ssh/*.pub &gt;config/authorized_key
+</pre></div>
+
+
+<h2 id="4-build-the-iso-image">4. Build the ISO image</h2>
+<p>You are now ready to build the ISO image, run this command:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> preseed
+./build.sh
+</pre></div>
+
+
+<p>This will create the ISO image in <code>/tmp/build-${hostname}/${hostname}-install.iso</code> folder, for instance
+<code>/tmp/homebox/homebox-install.iso</code></p>
+<h2 id="5-boot-the-system">5. Boot the system</h2>
+<p>The whole installation should be automatic, both with LVM and software RAID. For LVM, there is a volume called &ldquo;reserved&rdquo;
+you can remove. This will let you resize the other volumes according to your needs.</p>
+<p>If anything goes wrong, use issues on <a href="https://github.com/progmaticltd/homebox">Github project page</a> for support.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The installer has been tested both on a virtual and a physical machine. In the second case, the hardware differences
+sometimes stops and the installer asks questions. Just answer appropriately, and the installation procedure will
+continue further. Do not hesitate to send feedback about the questions asked.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the installation crashes in the middle, try to disable ACPI, add/or the following boot parameters in the
+installer:</p>
+<p><code>intel_idle.max_cstate=1</code></p>
+</div>
+<p>The next step is detailed in the <a href="../installation/">installation</a> section, and is really the installation procedure.</p>
+<h1 id="disk-scheme-options">Disk scheme options</h1>
+<h2 id="full-disk-encryption">Full disk encryption</h2>
+<p>This is the recommended one. Use <code>preseed: luks</code>. Once installed, the system drive will be fully encrypted with
+<a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS</a>.</p>
+<p>If you are interested, you can achieve redundancy of the system drive, using a hardware RAID enclosure.</p>
+<h2 id="software-raid">Software RAID</h2>
+<p>Use <code>preseed: raid</code>. Please, note that if you are using software RAID, the drives won&rsquo;t be encrypted. There are some
+considerations to use file level encryption, but this is not implemented and might not be at all.</p>
+<h2 id="lvm-only">LVM only</h2>
+<p>Use <code>preseed: lvm</code>. No redundancy and no encryption. This is probably not what you want for a live system, but might be
+useful for debugging.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../installation/" class="btn btn-neutral float-right" title="Homebox Installation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../prerequisites/" class="btn btn-neutral" title="Before the installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../prerequisites/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../installation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

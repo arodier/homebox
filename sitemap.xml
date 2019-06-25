@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/features/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/prerequisites/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/preseed/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/installation/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/email-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/webmail-roundcube/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/groupware-sogo/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/email-access-monitoring/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/antispam-rspamd/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/jabber-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/gogs-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/tor-privoxy-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/firewall-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/security-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/transmission-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/bind-configuration/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/external-accounts/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/backup-home/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/backup-restore/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/deployment-backup/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/backup-server/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/zabbix/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/maintenance/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/development/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/codeofconduct/</loc>
+     <lastmod>2019-06-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

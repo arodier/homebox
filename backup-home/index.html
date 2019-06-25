@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Backup your home folders - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Backup your home folders";
+    var mkdocs_page_input_path = "backup-home.md";
+    var mkdocs_page_url = "/backup-home/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Backup your home folders</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#supported-locations">Supported locations</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#one-strategy-example">One strategy example</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#backup-locations-details">Backup locations details</a></li>
+                
+                    <li><a class="toctree-l4" href="#local-directory">Local directory</a></li>
+                
+                    <li><a class="toctree-l4" href="#remote-server-over-ssh">Remote server over SSH</a></li>
+                
+                    <li><a class="toctree-l4" href="#remote-server-using-sshfs">Remote server, using SSHFS</a></li>
+                
+                    <li><a class="toctree-l4" href="#on-a-usb-drive">On a USB drive</a></li>
+                
+                    <li><a class="toctree-l4" href="#backup-on-a-network-drive">Backup on a network drive</a></li>
+                
+                    <li><a class="toctree-l4" href="#backup-on-amazon-s3">Backup on Amazon S3</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#backup-contents">Backup contents</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#emails-reporting">Emails reporting</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-backup-success-email">Example of backup success email</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-backup-error-email">Example of backup error email</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#send-reports-using-jabber">Send reports using Jabber.</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-success-message">Example of success message</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-error-message">Example of error message</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Backup your home folders</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The platform supports incremental backup of the home directory. You can specify multiple backup
+strategies, and multiple locations.</p>
+<h1 id="supported-locations">Supported locations</h1>
+<p>The locations currently supported are:</p>
+<ul>
+<li>dir: local drive, only useful for testing; does not require another device.</li>
+<li>ssh: remote backup on another server through SSH (borg backup need to be installed on the remote location).</li>
+<li>sshfs: remote backup on another server through SSH only (does not use remote borg server).</li>
+<li>cifs: samba share, probably on your local network.</li>
+<li>usb: named USB stick / NAS drive.</li>
+<li>s3fs: Backup on Amazon S3.</li>
+</ul>
+<p>For each location, the following procedure is followed:</p>
+<ol>
+<li>The backup location is mounted by the system.</li>
+<li>The backup is created (borg create).</li>
+<li>The backup is checked (borg check).</li>
+<li>The backup location is unmounted by the system.</li>
+<li>An email is sent, with the result of all the steps.</li>
+<li>If Jabber is activated, an IM is sent to inform the backup is finished, with the end result.</li>
+</ol>
+<h1 id="one-strategy-example">One strategy example</h1>
+<p>Here a non exhaustive example with multiple locations:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">borgbackup</span>
+  <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nas1</span>
+    <span class="l l-Scalar l-Scalar-Plain">automount</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="l l-Scalar l-Scalar-Plain">uuid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6e2cd39d-1109-43de-aee5-a6491fdec689</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">usb:///mnt/backup/nas1/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>                      <span class="c1"># The backup is currently active</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>                 <span class="c1"># Run the backup every day</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>                    <span class="c1"># Keep the last three days locally</span>
+    <span class="l l-Scalar l-Scalar-Plain">compression</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lz4</span>                 <span class="c1"># Use the fast compression for daily backups</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">backup-station</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ssh://backup-station.office.pm:/home/backup/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>                      <span class="c1"># The backup is currently active</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>                 <span class="c1"># Run the backup every day</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>                    <span class="c1"># Keep the last seven days (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>                   <span class="c1"># Keep the last four weeks (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>                  <span class="c1"># Keep the last six months (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">compression</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lz4</span>                 <span class="c1"># Use the fast compression for daily backups</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nas</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">smb://backup:giuwh97kwerr@nas1:/home/backup/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>                      <span class="c1"># The backup is currently active</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">weekly</span>                <span class="c1"># Run the backup every week</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>                   <span class="c1"># Keep the last four weeks (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>                  <span class="c1"># Keep the last six months (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">compression</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">zlib,9</span>              <span class="c1"># Use the good but slow compression for weekly backups</span>
+    <span class="l l-Scalar l-Scalar-Plain">rate_limit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>                  <span class="c1"># Network upload rate limit in kiByte/s</span>
+</pre></div>
+
+
+<p>The locations are automatically mounted on demand when the backup starts, and dismounted once the backup finished. You
+can have different backup frequencies, for instance daily, weekly or monthly.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Set up a rate limit when creating a remote backup. This will prevent the backup process to consume all your
+bandwidth and affect the email delivery.</p>
+</div>
+<h1 id="backup-locations-details">Backup locations details</h1>
+<p>For any backup type, the destination directory need to exist. All the backups are encrypted using the same encryption
+key. The encryption key backup is in your <a href="../deployment-backup/">backup directory</a>, in encryption/backup-key.pwd</p>
+<h2 id="local-directory">Local directory</h2>
+<p>This can be a temporary solution unless your main homebox drive is mounted in RAID (see
+<a href="../preseed#software-raid">preseed</a>) or if you have mounted a remote location yourself.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">local</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">dir://var/backups/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12</span>
+    <span class="l l-Scalar l-Scalar-Plain">idle_sec</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+    <span class="l l-Scalar l-Scalar-Plain">check_frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">weekly</span>
+</pre></div>
+
+
+<h2 id="remote-server-over-ssh">Remote server over SSH</h2>
+<p>This location scheme is using borg on a remote server, with an SSH connection. Therefore, the borg software need to be
+installed on the remote machine, with the appropriate permissions.</p>
+<p>For instance, you want to backup your system on a sever accessible via backup.homebox.space, with
+the user &ldquo;alice&rdquo;:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">backup-station</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ssh://alice@backup.homebox.space:/home/alice/backup/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>                      <span class="c1"># The backup is currently active</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>                 <span class="c1"># Run the backup every day</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>                    <span class="c1"># Keep the last seven days (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>                   <span class="c1"># Keep the last four weeks (1 by default)</span>
+    <span class="l l-Scalar l-Scalar-Plain">compression</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lz4</span>                 <span class="c1"># Use the fast compression for daily backups</span>
+</pre></div>
+
+
+<p>For SSH backup, the authentication scheme used is public key authentication, i.e. no password.</p>
+<p>The Ansible installation script automatically create a private and a public key for the root user,
+and send the public key to the postmaster, by email. You need to copy the key to the desired
+location on the remote instance, and configure your <code>authorized_keys</code> roughly like this:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># backup from homebox</span>
+<span class="nv">command</span><span class="o">=</span><span class="s2">&quot;borg serve --restrict-to-path /home/alice/backup&quot;</span>,restrict ssh-rsa AAAAE2VjZHN…SZzah5h5U+m4MJumCRRCJQXxaQ<span class="o">==</span> backup@homebox
+</pre></div>
+
+
+<p>The private and public keys are also saved in the deployment backup folder, into ssh-keys/root.</p>
+<h2 id="remote-server-using-sshfs">Remote server, using SSHFS</h2>
+<p>This location scheme allows you to backup on a remote system over SSH, but does not need borg to be installed. Here an
+example on an internal router:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">router</span>
+    <span class="l l-Scalar l-Scalar-Plain">automount</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">sshfs://backup@bkp.router.lan:/var/backup/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">keyName</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">backup.ecdsa</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+</pre></div>
+
+
+<p>The key name will be used to configure SSH to connect with this key, in the ~/.ssh/config.d/backup-router</p>
+<div class="codehilite"><pre><span></span># SSH configuration for router
+Host bkp.router.lan
+  User backup
+  UserKnownHostsFile /dev/null
+  CheckHostIP no
+  StrictHostKeyChecking no
+  IdentityFile ~/.ssh/backup.ecdsa
+</pre></div>
+
+
+<h2 id="on-a-usb-drive">On a USB drive</h2>
+<p>This is the recommended way to backup your system when you are restrained to local backup. Here
+an example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nas1</span>
+    <span class="l l-Scalar l-Scalar-Plain">automount</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="l l-Scalar l-Scalar-Plain">uuid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6d83f6d4-2769-46d0-b07b-675ab0863393</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">usb:///mnt/backup/nas1/homebox-backup</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>                      <span class="c1"># The backup is currently active</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daily</span>                 <span class="c1"># Run the backup every day</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_daily</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>                    <span class="c1"># Keep the last three days locally</span>
+    <span class="l l-Scalar l-Scalar-Plain">compression</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">lz4</span>                 <span class="c1"># Use the fast compression for daily backups</span>
+</pre></div>
+
+
+<p>The exact syntax for the url takes one drive name and an optional directory name. You can have
+multiple backups on the same device, by using a different sub-directory:</p>
+<p><code>url: usb:///mnt/backup/&lt;drive-name&gt;[/sub-directory]</code></p>
+<p>The filesystem UUID should be specified, and the initial folder should already exist on the
+external device. To obtain the UUID of your external drive, use blkid command. You do not need to
+be root. For instance:</p>
+<div class="codehilite"><pre><span></span>$ /sbin/blkid /dev/sdb1
+/dev/sdb1: <span class="nv">LABEL</span><span class="o">=</span><span class="s2">&quot;PortableBackup&quot;</span> <span class="nv">UUID</span><span class="o">=</span><span class="s2">&quot;6d83f6d4-2769-46d0-b07b-675ab0863393&quot;</span> <span class="nv">TYPE</span><span class="o">=</span><span class="s2">&quot;ext4&quot;</span> <span class="nv">PARTLABEL</span><span class="o">=</span><span class="s2">&quot;PortableBackup&quot;</span> <span class="nv">PARTUUID</span><span class="o">=</span><span class="s2">&quot;01572f1c-bb90-4eda-bccf-6e5953a25f44&quot;</span>
+</pre></div>
+
+
+<p>Once the backup is finished, the USB drive be automatically unmounted after 60 seconds of
+inactivity. This allows you to remove the usb drive safely.</p>
+<h2 id="backup-on-a-network-drive">Backup on a network drive</h2>
+<p>You can also backup on a network drive, perhaps on your local network, using SMB protocol (Windows
+network share). Here an example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">home.lan</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">cifs://backup:eecPxKbeDvs02g7BEdwf@nas1.home.lan:/backup</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">weekly</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+</pre></div>
+
+
+<h2 id="backup-on-amazon-s3">Backup on Amazon S3</h2>
+<p>You can also backup on a S3 bucket on AWS cloud platform. Here an example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+  <span class="l l-Scalar l-Scalar-Plain">- name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">s3main</span>
+    <span class="l l-Scalar l-Scalar-Plain">automount</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="l l-Scalar l-Scalar-Plain">url</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">s3fs:///mnt/backup/s3main/homebox</span>
+    <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">yes</span>
+    <span class="l l-Scalar l-Scalar-Plain">frequency</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">weekly</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_weekly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
+    <span class="l l-Scalar l-Scalar-Plain">keep_monthly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">6</span>
+    <span class="l l-Scalar l-Scalar-Plain">access_key_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">AKD1WAGJDIKWSX2TRPQR</span>
+    <span class="l l-Scalar l-Scalar-Plain">secret_access_key</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">gBiRu5hPSyswK17TNpp2IIf5sWDNJx6Vb9Gx3rjF</span>
+    <span class="l l-Scalar l-Scalar-Plain">bucket_name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">homebox-backup.example.com</span>
+    <span class="l l-Scalar l-Scalar-Plain">region</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">eu-west-2</span>
+    <span class="l l-Scalar l-Scalar-Plain">rate_limit</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>
+</pre></div>
+
+
+<p>And here an appropriate example of bucket policy:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Id&quot;</span><span class="p">:</span> <span class="s2">&quot;Policy1559913732504&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Statement&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;Sid&quot;</span><span class="p">:</span> <span class="s2">&quot;Stmt1559913723346&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Effect&quot;</span><span class="p">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Principal&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;AWS&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:iam::399724661369:user/homebox&quot;</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;s3:*&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;Resource&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:s3:::homebox-backup.example.com&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>You can use the <a href="https://awspolicygen.s3.amazonaws.com/policygen.html">Amazon S3 policy generator</a>.</p>
+<p>As usual, everything is encrypted locally using borg backup. Therefore, no one will be able to
+decrypt your files without the encryption key.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>This location storage is actually under scrutiny, and might be removed if proven unstable.</li>
+<li>Under the hood, <a href="https://github.com/s3fs-fuse/s3fs-fuse">S3FS</a> is used, with the cache option activated, and located
+  in /home/.backup-cache/. Because this folder content is about the size if the whole backup, the /home partition
+  should have enough available disk space.</li>
+</ul>
+</div>
+<h1 id="backup-contents">Backup contents</h1>
+<p>At this time, only the content of the /home folders is back up, perhaps the emails. This should also allow you to
+restore your emails after a fresh installation or in case of accidental deletion.</p>
+<p>Any file stored by the users in their home folders is back up too.</p>
+<p>Some folders are excluded from the backup, like the email indexes and temporary files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>If <a href="../gogs-configuration/">Gogs</a> is installed, the repository files are automatically excluded from backup.</li>
+<li>If the Transmission bittorrent daemon is installed, the downloaded files are excluded as well.</li>
+</ul>
+</div>
+<h1 id="emails-reporting">Emails reporting</h1>
+<p>By default, backup jobs are run overnight, and an email is sent to the postmaster, with a summary of the backup job:</p>
+<h2 id="example-of-backup-success-email">Example of backup success email</h2>
+<div class="codehilite"><pre><span></span>Backup report for nas1: Success
+Creation status:
+------------------------------------------------------------------------------
+Archive name: home-2018-04-07 22:03:47.380483
+Archive fingerprint: b5ca1c8ff733e6450c861ac66ccc70fcdcffe13690a969c895bc8cf843f27059
+Time (start): Sat, 2018-04-07 22:03:48
+Time (end):   Sat, 2018-04-07 22:03:48
+Duration: 0.37 seconds
+Number of files: 2825
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+This archive:              157.00 MB            123.53 MB             58.16 kB
+All archives:              784.84 MB            617.59 MB            123.94 MB
+
+                       Unique chunks         Total chunks
+Chunk index:                    2014                13830
+------------------------------------------------------------------------------
+terminating with success status, rc 0
+——————————————————————————————————————————————————————————————————————————————
+Prune status:
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+Deleted data:                    0 B                  0 B                  0 B
+All archives:              784.84 MB            617.59 MB            123.94 MB
+
+                       Unique chunks         Total chunks
+Chunk index:                    2014                13830
+------------------------------------------------------------------------------
+terminating with success status, rc 0
+——————————————————————————————————————————————————————————————————————————————
+Check status:
+Starting repository check
+Starting repository index check
+Completed repository check, no problems found.
+Starting archive consistency check...
+Analyzing archive home-2019-06-04 15:10:43.524553 (1/10)
+Analyzing archive home-2019-06-04 17:42:15.409853 (2/10)
+Analyzing archive home-2019-06-04 17:56:40.781983 (3/10)
+Analyzing archive home-2019-06-04 18:01:27.745755 (4/10)
+Analyzing archive home-2019-06-04 18:08:36.704945 (5/10)
+Analyzing archive home-2019-06-05 06:25:04.664133 (6/10)
+Analyzing archive home-2019-06-06T06:25:06 (7/10)
+Analyzing archive home-2019-06-07T08:01:36 (8/10)
+Analyzing archive home-2019-06-08T06:25:05 (9/10)
+Analyzing archive home-2019-06-08T15:50:29 (10/10)
+Archive consistency check complete, no problems found.
+</pre></div>
+
+
+<h2 id="example-of-backup-error-email">Example of backup error email</h2>
+<div class="codehilite"><pre><span></span>Backup report for router: Error
+Exception when running backup, see logs for details
+Creation status:
+Synchronizing chunks cache...
+Archives: 1, w/ cached Idx: 0, w/ outdated Idx: 0, w/o cached Idx: 1.
+Fetching and building archive index for home-2018-04-07 13:49:40.582441 ...
+Merging into master chunks index ...
+Done.
+------------------------------------------------------------------------------
+Archive name: home-2018-04-08 07:35:51.274554
+Archive fingerprint: 710bf94819fc6699cc04c050ba324541b40ef4849ed8e76603b5f0b816f1a75d
+Time (start): Sun, 2018-04-08 07:35:51
+Time (end):   Sun, 2018-04-08 07:35:51
+Duration: 0.08 seconds
+Number of files: 52
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+This archive:               62.28 kB             37.01 kB             31.88 kB
+All archives:              273.41 MB            241.18 MB            241.06 MB
+
+                       Unique chunks         Total chunks
+Chunk index:                    2056                 2834
+------------------------------------------------------------------------------
+terminating with success status, rc 0
+——————————————————————————————————————————————————————————————————————————————
+Prune errors:
+At least one of the &quot;keep-within&quot;, &quot;keep-last&quot;, &quot;keep-hourly&quot;, &quot;keep-daily&quot;, &quot;keep-weekly&quot;, &quot;keep-monthly&quot; or &quot;keep-yearly&quot; settings must be specified.
+terminating with error status, rc 2
+</pre></div>
+
+
+<h1 id="send-reports-using-jabber">Send reports using Jabber.</h1>
+<p>Homebox comes with the option to send backup status using short messages in real time, using the Jabber server embedded
+in the platform. To do so, use the following settings:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">backup</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">borgbackup</span>
+  <span class="l l-Scalar l-Scalar-Plain">alerts</span><span class="p p-Indicator">:</span>
+<span class="hll">    <span class="l l-Scalar l-Scalar-Plain">jabber</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</span>    <span class="l l-Scalar l-Scalar-Plain">from</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postmaster@homebox.space</span>
+    <span class="l l-Scalar l-Scalar-Plain">recipient</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">andre@homebox.space</span>
+  <span class="l l-Scalar l-Scalar-Plain">locations</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+
+<p>A first message will be sent just before the backup process starts, and onother one once the process is finished, with
+the status. The last message contains only the status. For a full report, you&rsquo;ll still have to check the email.</p>
+<h2 id="example-of-success-message">Example of success message</h2>
+<div class="codehilite"><pre><span></span>00:15 postmaster: Backup process finished successfully for location &quot;nas1&quot;
+</pre></div>
+
+
+<h2 id="example-of-error-message">Example of error message</h2>
+<div class="codehilite"><pre><span></span>00:03 postmaster: Backup process failed for location &#39;nas1&#39; (See the email for details)
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backup-restore/" class="btn btn-neutral float-right" title="Backup restoration">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../external-accounts/" class="btn btn-neutral" title="External accounts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../external-accounts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../backup-restore/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

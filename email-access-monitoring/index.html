@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Email access monitoring - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Email access monitoring";
+    var mkdocs_page_input_path = "email-access-monitoring.md";
+    var mkdocs_page_url = "/email-access-monitoring/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groupware-sogo/">Sogo Groupware</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Email access monitoring</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#email-access-monitoring">Email access monitoring</a></li>
+                
+                    <li><a class="toctree-l4" href="#scoring-system">Scoring system</a></li>
+                
+                    <li><a class="toctree-l4" href="#unusual-behaviours">Unusual behaviours</a></li>
+                
+                    <li><a class="toctree-l4" href="#other-considerations">Other considerations</a></li>
+                
+                    <li><a class="toctree-l4" href="#customising-the-alert-address">Customising the alert address</a></li>
+                
+                    <li><a class="toctree-l4" href="#detailed-settings">Detailed settings</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-messages">Example of messages</a></li>
+                
+                    <li><a class="toctree-l4" href="#customised-access-checkconf">Customised access-check.conf</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#monthly-reports">Monthly reports</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-of-report">Example of report</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Email access monitoring</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="email-access-monitoring">Email access monitoring</h1>
+<p>This optional feature is for users who are genuinely concerned about the confidentiality of their emails, and want to be
+aware as soon as someone else is opening their emails.</p>
+<p>The default settings should be appropriate for most users. However, the users who have unusual habits will be able to
+tune the system according to their needs.</p>
+<ul>
+<li>It can send you warning, in real time, when something unusual is happening, which is explained below.</li>
+<li>It can block the connection, for instance from blacklisted IP addresses, and send you a warning in real time.</li>
+<li>It logs all your connection information in a small database. Each user can then do some querying and reporting easily.</li>
+<li>A monthly report is sent the first day of every month, containing the analysis of the previous month.</li>
+<li>When the &ldquo;impersonate&rdquo; feature is used to access one user&rsquo;s emails, an alert is sent in real time to this user.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Real time alerts are sent by email and XMPP, to your account or an external account if configured so.</p>
+</div>
+<h2 id="scoring-system">Scoring system</h2>
+<p>When this feature is activated, every time your emails are accessed, a sequence of analysis is executed. Every violation
+of a rule increase a score by a number of points. Above a certain score, a warning is sent. Above another score, the
+connection is denied.</p>
+<ul>
+<li>The scoring system can be easily customised, globally or per user.</li>
+<li>Only one warning is sent per day, per connection.</li>
+<li>When a connection is denied, email alerts are limited to one per hour.</li>
+</ul>
+<p>The default points should be satisfactory for the standard needs, so it is better to tune other parameters, like
+whitelisting IP addresses or countries.</p>
+<p>Any customisation should be done in the Homebox configuration directory <code>~/.config/homebox/</code>.</p>
+<h3 id="default-settings">Default settings</h3>
+<ul>
+<li>Warning score: 40</li>
+<li>Deny score: 120</li>
+</ul>
+<h2 id="unusual-behaviours">Unusual behaviours</h2>
+<p>Unusual behaviours are defined below, from the highest score to the lowest.</p>
+<h3 id="connection-from-a-blacklisted-ip-address">Connection from a blacklisted IP address</h3>
+<p>If you are checking your emails from another place, the system will check the reputation of the IP address, and will
+warn you if the place is not safe. The software used is <a href="https://github.com/logic/rblcheck">rblcheck</a>. The more an IP
+address is blacklisted, the more you are likely to receive a warning.</p>
+<p>Points: 60 points per blacklist record.</p>
+<p>By default, the following lists are checked:</p>
+<ul>
+<li>sbl.spamhaus.org</li>
+<li>xbl.spamhaus.org</li>
+<li>pbl.spamhaus.org</li>
+<li>bl.spamcop.net</li>
+<li>psbl.surriel.com</li>
+<li>dul.dnsbl.sorbs.net</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When an IP address is blacklisted two times, the connection will be denied.</p>
+</div>
+<h4 id="customisation">Customisation</h4>
+<p>If for any reason, you need to connect from an IP address you know is blacklisted, you can whitelist the IP address, by
+creating a file <code>ip-whitelist.txt</code> inside your homebox configuration directory <code>~/.config/homebox</code>.</p>
+<p>This file can look like this:</p>
+<div class="codehilite"><pre><span></span># Budapest UPC Magyarorszag Kft:
+176.63.24.0/21
+
+# Swiss ressort
+81.17.27.131
+</pre></div>
+
+
+<p>Comments and blank lines are not mandatory and are ignored. You can also whitelist entire networks using CIDR blocks.</p>
+<p>Although it is not recommended, you can also change the blacklisting score globally:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">ip</span><span class="p p-Indicator">:</span>
+<span class="hll">    <span class="l l-Scalar l-Scalar-Plain">rbl_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>
+</span></pre></div>
+
+
+<h3 id="ip-addresses-blacklisted-by-fail2ban">IP addresses blacklisted by fail2ban</h3>
+<p>If an IP address has been before blacklisted by fail2ban, a score of 10 will be added per blacklist. So, if an IP
+address has been banned 5 time in the last log file, the score will be 50 points.</p>
+<p>This is a safeguard to ensure a brute force attack against your email account is rejected, even if the password has been
+found.</p>
+<p>If you want to tune this, you can change the fail2ban score to another value, or even to 0 to disable it
+entirely:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">ip</span><span class="p p-Indicator">:</span>
+<span class="hll">    <span class="l l-Scalar l-Scalar-Plain">fail2ban_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+</span></pre></div>
+
+
+<h3 id="connection-from-a-foreign-country">Connection from a foreign country</h3>
+<p>If for instance you are living in France, there is no reason you would connect from China or Russia, except if you are
+often travelling in these countries. In this case, you can add the country code to the list of trusted countries.</p>
+<p>You can trust some countries for the whole system, by changing the access_check.countries.trust values:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">countries</span><span class="p p-Indicator">:</span>
+<span class="hll">    <span class="l l-Scalar l-Scalar-Plain">trust</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span> <span class="s">&#39;FR&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;DE&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;GB&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;ES&#39;</span> <span class="p p-Indicator">]</span>
+</span></pre></div>
+
+
+<p>If you prefer to do it for one user only you can define a list of &ldquo;trusted&rdquo; countries, in the user&rsquo;s configuration file.</p>
+<p>The user configuration file should be called <code>access-check.conf</code>, inside the folder <code>~/.config/homebox</code>.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># A comma separated list of country codes to trust (e.g. FR,DE,GB)</span>
+<span class="nv">COUNTRIES_TRUST</span><span class="o">=</span><span class="s1">&#39;RU,DE,FR&#39;</span>
+</pre></div>
+
+
+<p>For instance, in a family, parents are travelling more than children, so it make more sense to do it per users.</p>
+<h3 id="connection-at-unusual-time">Connection at unusual time</h3>
+<p>This is a minor check, but it helps to warns you, especially when this fact is happening along with other suspicious
+behaviours. For instance, accessing your emails at midnight, from an IP address that is blacklisted will definitely
+generate a warning.</p>
+<p>Points: 10 points per hour outside the working hours. For instance, if you defined your working hours from 9am to 6pm, a
+connection at 2am will generate 70 points, and a warning will be sent.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Warnings are limited to one per day only.</p>
+</div>
+<p>If you have unusual working hours, or if you want to disable this entirely, you can set for instance 0-23. Times are
+specified in 24h mode.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">time</span><span class="p p-Indicator">:</span>
+</span><span class="hll">    <span class="l l-Scalar l-Scalar-Plain">start</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
+</span><span class="hll">    <span class="l l-Scalar l-Scalar-Plain">end</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">22</span>
+</span></pre></div>
+
+
+<h2 id="other-considerations">Other considerations</h2>
+<h3 id="connections-from-lan">Connections from LAN</h3>
+<p>Connections from your local network are actually trusted, but logged. Other scripts might be added later to offer more
+control.</p>
+<h3 id="blacklisting-countries">Blacklisting countries</h3>
+<p>You can blacklist entire countries, but system wide only for now.</p>
+<p>For instance, here how to deny all IMAP connections, on the whole system, to Russia and China:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">countries</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">blacklist</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span> <span class="s">&#39;RU&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;CN&#39;</span> <span class="p p-Indicator">]</span>
+</pre></div>
+
+
+<h2 id="customising-the-alert-address">Customising the alert address</h2>
+<p>By defaults, the alerts will be sent to the postmaster <em>and</em> the user under attack, using both email and XMPP.</p>
+<p>You can also use an external email address, by specifying the address globally, in the system.yml file:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+<span class="hll">  <span class="l l-Scalar l-Scalar-Plain">alert_address</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">john.doe@protonmail.com</span>
+</span>  <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+
+<p>Finally, this can be done per user as well, by modifying the <code>access-check.conf</code> file, inside the folder
+<code>~/.config/homebox</code>:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Send alerts and XMPP warnings to an external address:</span>
+<span class="nv">ALERT_ADDRESS</span><span class="o">=</span><span class="s1">&#39;other@protonmail.com&#39;</span>
+</pre></div>
+
+
+<p>It is advised to use an external address, to be sure a compromised account cannot be cleared from its alerts.</p>
+<h2 id="detailed-settings">Detailed settings</h2>
+<p>These settings are visible in the defaults.yml file, in the repository:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">access_check_default</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">active</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">whitelist_bonus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">255</span>        <span class="c1"># Bonus to apply when an IP or country is whitelisted. Max value is 255</span>
+  <span class="l l-Scalar l-Scalar-Plain">blacklist_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">255</span>        <span class="c1"># Malus to apply when an IP or country is blacklisted. Max value is 255</span>
+  <span class="l l-Scalar l-Scalar-Plain">warning_score</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>           <span class="c1"># Score threshold to generate a warning</span>
+  <span class="l l-Scalar l-Scalar-Plain">denied_score</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">120</span>           <span class="c1"># Score threshold to deny a connection</span>
+  <span class="l l-Scalar l-Scalar-Plain">display_score</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>        <span class="c1"># # Should we display the scores in the alerts ?</span>
+                              <span class="c1"># It is more informative for development</span>
+                              <span class="c1"># but it might be confusing for new users</span>
+  <span class="l l-Scalar l-Scalar-Plain">time</span><span class="p p-Indicator">:</span>                       <span class="c1"># Standard time range you are normally checking your emails.</span>
+    <span class="l l-Scalar l-Scalar-Plain">zone</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>                <span class="c1"># The timezone to consider when checking the access time.</span>
+    <span class="l l-Scalar l-Scalar-Plain">start</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>                  <span class="c1"># start-end:  the more you are outside this range, the more malus points</span>
+    <span class="l l-Scalar l-Scalar-Plain">end</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">18</span>                   <span class="c1">#   are added. 10 points per hour outside the range</span>
+                              <span class="c1">#   Perhaps this will generate one warning if you check your emails</span>
+                              <span class="c1">#   from home at midnight or at 2am.</span>
+  <span class="l l-Scalar l-Scalar-Plain">countries</span><span class="p p-Indicator">:</span>                  <span class="c1"># Countries check parameters</span>
+    <span class="l l-Scalar l-Scalar-Plain">trust</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[]</span>                 <span class="c1"># A list of additional countries to trust, i.e. that will not generate points.</span>
+                              <span class="c1">#   However, other restrictions are still applying (e.g. blacklisted IP address)</span>
+    <span class="l l-Scalar l-Scalar-Plain">blacklist</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[]</span>             <span class="c1"># A list of blacklisted countries. Connections from these countries will be denied.</span>
+    <span class="l l-Scalar l-Scalar-Plain">trust_home</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>          <span class="c1"># Trust home country by default (the country where the box is hosted)</span>
+    <span class="l l-Scalar l-Scalar-Plain">foreign_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>         <span class="c1"># The number of points added when connecting from a foreign country</span>
+    <span class="l l-Scalar l-Scalar-Plain">unknown_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">40</span>         <span class="c1"># The number of points added when the country cannot be identified</span>
+  <span class="l l-Scalar l-Scalar-Plain">ip</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">rbl_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>             <span class="c1"># The number of points added to the score when an IP address is blacklisted</span>
+    <span class="l l-Scalar l-Scalar-Plain">fail2ban_malus</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>        <span class="c1"># Malus to apply each time an IP address has blacklisted by fail2ban</span>
+    <span class="l l-Scalar l-Scalar-Plain">trust_home</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>          <span class="c1"># Trust local network by default (e.g. 192.168.1.0/24)</span>
+</pre></div>
+
+
+<p>Do not change the blacklist and whitelist scores, unless you know what you are doing. Due to Posix limitations, the
+maximum number returned by a script is 255. However, this number is internally evaluated to 1000, to make sure
+whitelisting an IP address is respected.</p>
+<h2 id="example-of-messages">Example of messages</h2>
+<p>All messages are sent both by email and using XMPP if the Jabber server has been selected for installation.</p>
+<p>This is the content of a message when an unusual connection has been detected. In this first example, the points are
+detailed, because the system has been configured with the option <code>display_score</code> to true.</p>
+<div class="codehilite"><pre><span></span>IMAP connection warning
+- User: andre (andre@homebox.space)
+- IP Address: 81.17.27.131
+- Source: Roundcube
+- Final score: 60 points
+
+Details:
+- This IP address is blacklisted 1 times. (+60 points)
+
+IP Details: https://duckduckgo.com/?q=whois+81.17.27.131
+</pre></div>
+
+
+<p>The second example, this is a message when a connection has been denied, this time without the point details:</p>
+<div class="codehilite"><pre><span></span>IMAP connection denied
+- User: andre (andre@homebox.space)
+- IP Address: 176.63.27.111
+- Source: Roundcube
+
+Details:
+- This IP address is blacklisted 3 times.
+- Unusual early connection for Europe/Budapest (06:46)
+
+IP Details: https://duckduckgo.com/?q=whois+176.63.27.111
+</pre></div>
+
+
+<p>Last example, this is a message sent to a user, when the master account is used to access their emails:</p>
+<div class="codehilite"><pre><span></span>Your emails are opened by the master user
+- IP Address: 176.63.27.152
+- Access: warning
+- Source: Roundcube
+- Status: warning
+
+IP Details: https://duckduckgo.com/?q=whois+176.63.27.152
+</pre></div>
+
+
+<h2 id="customised-access-checkconf">Customised access-check.conf</h2>
+<p>This file will be stored in <code>~/.config/homebox/access-check.conf</code></p>
+<div class="codehilite"><pre><span></span><span class="c1"># Access check policy for Homebox</span>
+
+<span class="c1"># I will travel in these countries for a few months</span>
+<span class="nv">COUNTRIES_TRUST</span><span class="o">=</span><span class="s1">&#39;FR,DE,ES&#39;</span>
+
+<span class="c1"># I am travelling, so don&#39;t trust home till I come back</span>
+<span class="nv">COUNTRIES_TRUST_HOME</span><span class="o">=</span><span class="s1">&#39;NO&#39;</span>
+</pre></div>
+
+
+<h1 id="monthly-reports">Monthly reports</h1>
+<p>The report can contains the following sections:</p>
+<ul>
+<li>Connections per country, if you are travelling.</li>
+<li>Unknown countries, with the IP addresses identified.</li>
+<li>Warned and denied connections, with the details of the warnings.</li>
+<li>Local access</li>
+<li>Client statustics (Roundcube / SOGo / IMAP)</li>
+<li>Statistics per hour of the day</li>
+</ul>
+<h2 id="example-of-report">Example of report</h2>
+<p><img alt="monthly report example" src="../img/access-log/monthly-report-full.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../antispam-rspamd/" class="btn btn-neutral float-right" title="Antispam configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../groupware-sogo/" class="btn btn-neutral" title="Sogo Groupware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../groupware-sogo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../antispam-rspamd/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

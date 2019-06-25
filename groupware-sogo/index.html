@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="André Rodier">
+  
+  <title>Sogo Groupware - homebox installation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Sogo Groupware";
+    var mkdocs_page_input_path = "groupware-sogo.md";
+    var mkdocs_page_url = "/groupware-sogo/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> homebox installation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../features/">Features</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../prerequisites/">Before the installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../preseed/">Debian OS installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Homebox Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-configuration/">Email configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../webmail-roundcube/">Roundcube Webmail</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Sogo Groupware</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#presentation">Presentation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#default-settings">Default settings</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#clients">Clients</a></li>
+                
+                    <li><a class="toctree-l4" href="#on-linux">On Linux</a></li>
+                
+                    <li><a class="toctree-l4" href="#on-windows">On Windows</a></li>
+                
+                    <li><a class="toctree-l4" href="#on-android">On Android</a></li>
+                
+                    <li><a class="toctree-l4" href="#on-macos-ios">On MacOS / iOS</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../email-access-monitoring/">Email access monitoring</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../antispam-rspamd/">Antispam configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../jabber-configuration/">Jabber configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../gogs-configuration/">Gogs configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../tor-privoxy-configuration/">Tor / privoxy configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../firewall-configuration/">Firewall configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../security-configuration/">Security configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../transmission-configuration/">Transmission configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../bind-configuration/">DNS Server configuration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../external-accounts/">External accounts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-home/">Backup your home folders</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-restore/">Backup restoration</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../deployment-backup/">Backup your deployment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../backup-server/">Backup server</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../zabbix/">Monitoring with Zabbix</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../maintenance/">Maintenance</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../development/">Testing and development</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../codeofconduct/">Code of conduct</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">homebox installation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Sogo Groupware</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="presentation">Presentation</h1>
+<p>SOGo is a fully supported and trusted groupware server with a focus on scalability and open standards.</p>
+<p>SOGo provides a rich AJAX-based Web interface and supports multiple native clients through the use of standard protocols
+such as CalDAV, CardDAV and GroupDAV, as well as Microsoft ActiveSync.</p>
+<p>SOGo offers multiple ways to access calendaring and messaging data. Your users can either use a web browser, Microsoft
+Outlook, Mozilla Thunderbird, Apple iCal, or a mobile device to access the same information.</p>
+<h1 id="default-settings">Default settings</h1>
+<p>These settings are loaded by default when installing SOGo:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">sogo</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">appointment_send_emails</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">vacation</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">forward</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">sieve_scripts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">first_day_of_week</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span> <span class="c1"># 1 is Monday</span>
+  <span class="l l-Scalar l-Scalar-Plain">day_start_time</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">9</span>
+  <span class="l l-Scalar l-Scalar-Plain">day_end_time</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">17</span>
+  <span class="l l-Scalar l-Scalar-Plain">time_format</span><span class="p p-Indicator">:</span> <span class="s">&#39;%H:%M&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">refresh_view_check</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">every_minute</span>
+  <span class="l l-Scalar l-Scalar-Plain">auxiliary_accounts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">English</span>
+  <span class="l l-Scalar l-Scalar-Plain">enable_public_access</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="l l-Scalar l-Scalar-Plain">password_change</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">auxiliary_accounts</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appointment_send_emails</td>
+<td>Send emails when apointments are created.</td>
+</tr>
+<tr>
+<td>vacation</td>
+<td>Activate vacation functionality in the web interface.</td>
+</tr>
+<tr>
+<td>forward</td>
+<td>Activate automatic forward functionality in the web interface.</td>
+</tr>
+<tr>
+<td>sieve_scripts</td>
+<td>Allow you to filter your emails using advanced server side filters.</td>
+</tr>
+<tr>
+<td>first_day_of_week</td>
+<td>Set the first day of the week in the interface. Default is Monday, 1. Set it to 0 for Sunday.</td>
+</tr>
+<tr>
+<td>day_start_time / day_end_time</td>
+<td>The working hours, in 24h notation.</td>
+</tr>
+<tr>
+<td>time_format</td>
+<td>The format used to display the time. See the <a href="http://strftime.org/">strftime</a> function for format.</td>
+</tr>
+<tr>
+<td>refresh_view_check</td>
+<td>The time interval to check for new emails.</td>
+</tr>
+<tr>
+<td>auxiliary_accounts</td>
+<td>Allow you to retrieve emails from external accounts, directly from the web interface.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>The defaut language of the web interface¹</td>
+</tr>
+<tr>
+<td>enable_public_access</td>
+<td>Allow public access to your calendars and address books, using a specific URL.</td>
+</tr>
+<tr>
+<td>password_change</td>
+<td>Allow you to change your passwors from the web interface.</td>
+</tr>
+</tbody>
+</table>
+<p><strong> Notes </strong></p>
+<ol>
+<li>Possible values are defined in the
+<a href="https://sogo.nu/files/docs/SOGoInstallationGuide.html#_general_preferences">SOGo installation guide</a></li>
+</ol>
+<h1 id="clients">Clients</h1>
+<p>You can use any client compatible with these standards:</p>
+<h2 id="on-linux">On Linux</h2>
+<ul>
+<li><a href="https://wiki.gnome.org/Apps/Evolution/">Evolution</a></li>
+<li><a href="https://www.thunderbird.net/">Thunderbird</a></li>
+</ul>
+<h2 id="on-windows">On Windows</h2>
+<ul>
+<li><a href="https://www.thunderbird.net/">Thunderbird</a></li>
+<li><a href="https://www.emclient.com/">eM Client</a> (Not open source)</li>
+<li>Microsoft Outlook (Not open source)</li>
+</ul>
+<h2 id="on-android">On Android</h2>
+<ul>
+<li><a href="https://www.davdroid.com/">DavDroid</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.dmfs.caldav.lib">CalDAV Sync</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.dmfs.carddav.sync">CardDAV sync</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.dmfs.tasks">OpenTasks</a></li>
+</ul>
+<h2 id="on-macos-ios">On MacOS / iOS</h2>
+<ul>
+<li>Apple Calendar</li>
+<li>Contacts.app</li>
+<li><a href="https://www.thunderbird.net/">Thunderbird</a></li>
+<li><a href="https://www.emclient.com/">eM Client</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../email-access-monitoring/" class="btn btn-neutral float-right" title="Email access monitoring">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../webmail-roundcube/" class="btn btn-neutral" title="Roundcube Webmail"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Creative Commons Attribution-ShareAlike 4.0 International License</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/progmaticltd/homebox/" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../webmail-roundcube/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../email-access-monitoring/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
