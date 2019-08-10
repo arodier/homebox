@@ -155,18 +155,17 @@ official documentation.
 
 - Postfix configuration and installation, with LDAP lookups, internationalised email aliases,
   fully SSL compliant.
-- Generate DKIM keys, SPF and DMARC DNS records.
+- Generate DKIM keys, SPF and DMARC DNS records, automatic implementation of MTA-STS ([RFC8461]).
 - Automatic copy of sent emails into the sent folder.
 - Automatic creation of the postmaster account and special email addresses using
   [RFC 2142](https://tools.ietf.org/html/rfc2142) specifications.
-- Dovecot configuration, IMAPS, POP3S, Quotas, ManageSieve, simple spam and ham learning
-  by moving emails in and out the Junk folder, sieve and vacation scripts.
+- Dovecot with IMAPS, POP3S, Quotas, ManageSieve, sieve and vacation scripts, sieve filters by address book.
+- Simple spam and ham learning by moving emails in and out the Junk folder.
 - Virtual folders for server search: unread messages, conversations view, all messages, flagged
   and messages labelled as "important".
 - Email addresses with recipient delimiter included, e.g. john.doe+lists@dbcooper.com.
 - Optional master user creation, e.g. for families with children or moderated communities.
-- Server side full text search inside emails, attached documents and files and
-  compressed archives, with better results than GMail.
+- Server side full text search inside emails, attached documents, files and compressed archives.
 - Optional Roundcube webmail with sieve filters management, password change form, automatic identity
   creation, master account access, etc.
 - Optional SOGo webmail with sieve filters management, password change form, Calendar and Address book management, GUI
