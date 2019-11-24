@@ -1,0 +1,44 @@
+---
+
+- name: Install the fastd vpn client
+  apt:
+    name: fastd
+    state: present
+
+- name: Change the default settings
+  notify: Restart fastd
+  replace:
+    path: /etc/default/fastd
+    regexp: 'AUTOSTART="none"'
+    replace: 'AUTOSTART="all"'
+
+- name: Copy the configuration
+  copy:
+    src: '{{ backup_directory }}/fastd/client.conf'
+    dest: /etc/fastd/fastd.conf
+
+# Example: remote ipv4 45.77.230.90 port 14789;
+- name: Read the port from configuration
+  register: port_cmd
+  shell: >-
+    sed -En 's/.*port ([0-9]+);/\1/p'
+    /etc/fastd/fastd.conf
+  args:
+    warn: false
+
+- name: Read the IP from configuration
+  register: ip_cmd
+  shell: >-
+    sed -En 's/.*ipv4 ([0-9\.]+) .*;/\1/p'
+    /etc/fastd/fastd.conf
+  args:
+    warn: false
+
+- name: Open the firewall on the appropriate port
+  ufw:
+    to_ip: '{{ ip_cmd.stdout }}'
+    to_port: '{{ port_cmd.stdout }}'
+    proto: udp
+    direction: out
+    comment: 'Allow fast VPN access (fastd)'
+    rule: allow
