@@ -1,0 +1,84 @@
+---
+
+- name: Create a directory for keys backup if it does not exists
+  delegate_to: localhost
+  tags: sync
+  file:
+    path: '{{ backup_directory }}/tinc/'
+    state: directory
+
+# The "--ignore-existing" option skip the files already existing,
+# The '--update' option make sure to not overwrite new keys.
+- name: If the keys have been generated before, copy them on the remote server
+  tags: sync
+  synchronize:
+    src: '{{ backup_directory }}/tinc/'
+    dest: /etc
+    owner: no
+    group: no
+    perms: yes
+    rsync_opts:
+      - '--no-motd'
+      - '--exclude=readme.md'
+      - '--ignore-existing'
+      - '--update'
+
+- name: Install the tinc vpn client
+  apt:
+    name: tinc
+    state: present
+
+- name: Create the configuration directory
+  file:
+    path: '/etc/tinc/{{ tinc.name }}'
+    state: directory
+    mode: '0700'
+
+- name: Create subdirectory for hosts
+  file:
+    path: '/etc/tinc/{{ tinc.name }}/hosts'
+    state: directory
+    mode: '0755'
+
+- name: Create the private / public keys
+  shell: >-
+    /usr/sbin/tincd -n {{ tinc.name }} --generate-key
+  args:
+    creates: '/etc/tinc/{{ tinc.name }}/rsa_key.priv'
+
+- name: Get the public key
+  register: public_key_cmd
+  shell: >-
+    cat /etc/tinc/{{  tinc.name }}/rsa_key.pub
+  args:
+    warn: false
+
+- name: Set the public key
+  set_fact:
+    public_key: '{{ public_key_cmd.stdout }}'
+
+- name: Copy the configuration
+  template:
+    src: client.conf
+    dest: '/etc/tinc/{{ tinc.name }}/tinc.conf'
+
+- name: Open the firewall on the appropriate port
+  ufw:
+    to_ip: '{{ tinc.remote }}'
+    to_port: '{{ tinc.port | default(655) }}'
+    proto: udp
+    direction: out
+    comment: 'Allow fast VPN access (tinc)'
+    rule: allow
+
+# Retrieve the vpn keys
+- name: Backup the keys on your local machine
+  tags: sync
+  synchronize:
+    mode: pull
+    src: /etc/tinc
+    dest: '{{ backup_directory }}/'
+    perms: yes
+    rsync_opts:
+      - '--no-motd'
+      - '--update'
